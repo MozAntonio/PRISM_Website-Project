@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> -->
+	<meta charset="utf-8" />
+	<title>Manuale amministrativo</title> <!-- dal particolare al generale -->
+	
+	<!-- meta -->
+	<meta name="description" content="Alcuni richiami alla sintassi e alle regole per inserire al meglio una recensione" /> <!-- max 150 char -->
+	<meta name="keywords" content="manuale,amministratore,tag,guida,html,sintassi,regole,recensione,Prism Game Reviews,Prism" /> <!-- max 10 -->
+	<meta name="author" content="Prism" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="none" />
+	
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="style/prismdefault.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="style/mobile.css" media="handheld, screen and (max-width:768px), only screen and (max-device-width:768px)" />
+	<!-- <link rel="stylesheet" type="text/css" href="style/prismdefault.css" media="all" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="style/mobile.css" media="screen and (max-width:768px)" /> -->
+	<link rel="stylesheet" type="text/css" href="style/print.css" media="print" />
+	<link rel="shortcut icon" href="images/favicon.png" />
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet" />
+	
+	<!-- script -->
+	<script src="js/modernizr.3.5.0.custom.min.js" type="text/javascript"></script>
+	<!--[if !IE]>-->
+	<script src="js/user.js" type="text/javascript"></script>
+	<!--<![endif]-->
+	
+	<!-- backward compatibility -->
+	<!--[if gt IE 7]>
+	<script src="js/user.js" type="text/javascript"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+	<![endif]-->
+	
+	<!-- licenses --> 
+		<!-- open sans ALv2 -->
+		<!-- modernizr MIT -->
+		<!-- html5shiv MIT -->
+</head>
+
+
+
+<body onload="addEventsHamburger()">
+
+<nav class="skipSection"><a href="#content">salta menu e vai al contenuto</a></nav>
+<header>
+	<div id="logoBlock">
+		<span id="logo"></span>
+		<h1 lang="en"><span class="accent">P</span>rism <span class="accent">G</span>ame <span class="accent">R</span>eviews</h1>
+	</div>
+	<nav id="menu">
+		<ul>
+			<li id="login"><ul>
+				<li><a href="php/profile.php">Profilo</a></li>
+			</ul></li>
+			<li id="mainMenu"><ul>
+				<li><a href="index.html" lang="en">Home</a></li>
+				<li><a href="php/searchByPlatform.php">Piattaforma</a></li>
+				<li><a href="php/searchByGenre.php">Genere</a></li>
+				<li><a href="searchByAZ.html"><abbr title="Lettera dell'Alfabeto">A-Z</abbr></a></li>
+			</ul></li>
+		</ul>
+	</nav>
+</header>
+
+<nav class="skipSection"><a href="#content">salta <span lang="en">breadcrumb</span> e vai al contenuto</a></nav>
+<nav id="breadcrumb">
+	<p>Ti trovi in: </p>
+	<ul>
+		<li><a href="php/profile.php">Profilo</a></li>
+		<li>Manuale amministrativo</li>
+	</ul>
+</nav>
+<div id="content">
+	<h1>Manuale amministrativo</h1>
+	
+	<h2>Introduzione</h2>
+	<p>Questo manuale è redatto a supporto degli utenti amministratori del sito <span lang="en">Prism Game Reviews</span>.</p>
+	<p>Se è la prima volta che si pubblica una recensione la lettura di questo manuale è caldamente consigliata.</p>
+	<p>Se non è la prima volta, questo manuale è il punto di riferimento per risolvere dubbi e incertezze tecniche.</p>
+	<p><span lang="en">Prism Game Reviews</span> ringrazia gli amministratori per il loro impegno e dedizione.</p>
+	
+	<h2>Scopo</h2>
+	<p>Questo manuale è pensato per risolvere i principali e più comuni dubbi sulla compilazione dei campi e sui tag <abbr title="HyperText Markup Language">HTML</abbr> permessi al loro interno nelle fasi di creazione e modifica di una recensione.</p>
+	<p>Si consultino inoltre le informazioni alla pagina <a href="privacy.html">note legali</a> in merito all'uso improprio, irregolare o illegale di sigle, nomi, immagini, e qualsiasi altra informazione od oggetto protetto da diritto d'autore.</p>
+	<p>Per dubbi particolari, o su di un campo specifico, si consiglia l'uso dell'indice per raggiungere direttamente la sezione dedicata.</p>
+	
+	<h2>Indice</h2>
+	<ul class="navList">
+		<li><a href="#allowedTags">1. Tag <abbr title="HyperText Markup Language">HTML</abbr> permessi</a>
+			<ul>
+				<li><a href="#tagSpan">1.1 Tag <code>&lt;span lang=&quot;xx&quot;&gt;</code></a></li>
+				<li><a href="#tagAcronym">1.2 Tag <code>&lt;acronym title=&quot;testo esteso&quot;&gt;</code></a></li>
+				<li><a href="#tagAbbr">1.3 Tag <code>&lt;abbr title=&quot;testo esteso&quot;&gt;</code></a></li>
+				<li><a href="#tagStrong">1.4 Tag <code>&lt;strong&gt;</code></a></li>
+				<li><a href="#tagEm">1.5 Tag <code>&lt;em&gt;</code></a></li>
+				<li><a href="#tagP">1.6 Tag <code>&lt;p&gt;</code></a></li>
+				<li><a href="#tagUl">1.7 Tag <code>&lt;ul&gt;</code></a></li>
+				<li><a href="#tagOl">1.8 Tag <code>&lt;ol&gt;</code></a></li>
+			</ul>
+		</li>
+		<li><a href="#htmlLanguageXmlSyntax">2. Linguaggio <abbr title="HyperText Markup Language">HTML</abbr> (sintassi <abbr title="eXtensible Markup Language">XML</abbr>)</a>
+			<ul>
+				<li><a href="#wellFormedRules">2.1 Regole buona formazione</a></li>
+				<li><a href="#nestingTags">2.2 Annidamento tag <abbr title="HyperText Markup Language">HTML</abbr></a></li>
+			</ul>
+		</li>
+		<li><a href="#gameFields">3. Campi del gioco</a>
+			<ul>
+				<li><a href="#gameTitle">3.1 Titolo gioco</a></li>
+				<li><a href="#coverImage">3.2 Immagine copertina</a></li>
+				<li><a href="#coverDescription">3.3 Descrizione copertina</a></li>
+				<li><a href="#developer">3.4 Sviluppatore</a></li>
+				<li><a href="#releaseYear">3.5 Anno pubblicazione</a></li>
+				<li><a href="#platforms">3.6 Piattaforme</a></li>
+				<li><a href="#genres">3.7 Generi</a></li>
+				<li><a href="#officialSite">3.8 Sito ufficiale</a></li>
+				<li><a href="#pegi">3.9 <acronym title="Pan European Game Information">PEGI</acronym></a></li>
+			</ul>
+		</li>
+		<li><a href="#reviewFields">4. Campi della recensione</a>
+			<ul>
+				<li><a href="#reviewTitle">4.1 Titolo recensione</a></li>
+				<li><a href="#shortDescription">4.2 Breve descrizione recensione</a></li>
+				<li><a href="#reviewContent">4.3 Contenuto recensione</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	
+	<h2 id="allowedTags">1. Tag <abbr title="HyperText Markup Language">HTML</abbr> permessi</h2>
+	<p>I tag permessi durante la stesura della recensione di un gioco sono <strong>tag <abbr title="HyperText Markup Language">HTML</abbr> con sintassi <abbr title="eXtensible Markup Language">XML</abbr></strong>.</p>
+	<p>Ove è permesso l'utilizzo dei tag, si consiglia fortemente il loro utilizzo in modo corretto ed appropriato. Di contro quando non c'è la possibilità di utilizzare tag si cerchi di evitare parole straniere, acronimi o altri costrutti che richiederebbero l'uso di relativi tag. In questo modo si aiuta chi fa uso di <span lang="en">screen reader</span>, si aumenta l'accessibilità del prodotto finale, ed in generale si migliorano le recensioni pubblicate. Si consultino a tal proposito anche le informazioni alla pagina <a href="accessibility.html">accessibilità</a>.</p>
+	
+	<h3 id="tagSpan">1.1 Il tag <code>&lt;span lang=&quot;xx&quot;&gt;</code>:</h3>
+	<p>Permette di specificare che una parola o un breve testo è in una determinata <strong>lingua</strong>.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;span lang=&quot;xx&quot;&gt;testo o parola in lingua xx&lt;/span&gt;</code>, dove xx deve essere scelto fra:</p>
+	<ul>
+		<li>it (italiano)</li>
+		<li>en (inglese)</li>
+		<li>de (tedesco)</li>
+		<li>fr (francese)</li>
+		<li>es (spagnolo)</li>
+	</ul>
+	<h4>Esempio</h4>
+	<code class="exampleCode">Il logo è in <em>&lt;span lang=&quot;en&quot;&gt;home page&lt;/span&gt;</em>.</code>
+	<p class="exampleResult">Il logo è in <span lang="en">home page</span>.</p>
+	
+	<h3 id="tagAcronym">1.2 Il tag <code>&lt;acronym title=&quot;testo esteso&quot;&gt;</code>:</h3>
+	<p>Permette di specificare che una determinata parola è un <strong>acronimo</strong> o una <strong>sigla</strong>, specificandone per esteso il significato.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;acronym title=&quot;acronimo o sigla in forma estesa&quot;&gt;acronimo o sigla in forma compatta&lt;/acronym&gt;</code>.</p>
+	<h4>Esempio</h4>
+	<code class="exampleCode">Ogni videogioco riporta un apposito <em>&lt;acronym title=&quot;Pan European Game Information&quot;&gt;PEGI&lt;/acronym&gt;</em>.</code>
+	<p class="exampleResult">Ogni videogioco riporta un apposito <acronym title="Pan European Game Information">PEGI</acronym>.</p>
+	<h4>Note</h4>
+	<p>Il contenuto dell'attributo <span lang="en">title</span> può essere di sole lettere dell'alfabeto inglese (26 lettere complessive, minuscole e maiuscole) e spazi. Nessun altro carattere è accettato.</p>
+	
+	<h3 id="tagAbbr">1.3 Il tag <code>&lt;abbr title=&quot;testo esteso&quot;&gt;</code>:</h3>
+	<p>Permette di specificare che una determinata parola è un'<strong>abbreviazione</strong>, specificandone per esteso il significato.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;abbr title=&quot;abbreviazione in forma estesa&quot;&gt;abbreviazione in forma compatta&lt;/abbr&gt;</code>.</p>
+	<h4>Esempio</h4>
+	<code class="exampleCode">Questa pagina utilizza tag <em>&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;</em>.</code>
+	<p class="exampleResult">Questa pagina utilizza tag <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	<h4>Note</h4>
+	<p>Il contenuto dell'attributo <span lang="en">title</span> può essere di sole lettere dell'alfabeto inglese (26 lettere complessive, minuscole e maiuscole) e spazi. Nessun altro carattere è accettato.</p>
+	
+	<h3 id="tagStrong">1.4 Il tag <code>&lt;strong&gt;</code>:</h3>
+	<p>Permette di specificare che una parola o un breve testo è più <strong>importante</strong> rispetto al resto del testo nel quale è immerso.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;strong&gt;testo o parola importante&lt;/strong&gt;</code>.</p>
+	<h4>Esempio</h4>
+	<code class="exampleCode">Le due parole <em>&lt;strong&gt;testo importante&lt;/strong&gt;</em> sono più rilevanti rispetto al resto della frase.</code>
+	<p class="exampleResult">Le due parole <strong>testo importante</strong> sono più rilevanti rispetto al resto della frase.</p>
+	
+	<h3 id="tagEm">1.5 Il tag <code>&lt;em&gt;</code>:</h3>
+	<p>Permette di specificare che una parola o un breve testo è <strong>enfatizzato</strong> rispetto al resto del testo nel quale è immerso.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;em&gt;testo o parola da enfatizzare&lt;/em&gt;</code>.</p>
+	<h4>Esempio</h4>
+	<code class="exampleCode">In questa frase la parola <em>&lt;em&gt;enfasi&lt;/em&gt;</em> risulterà enfatizzata.</code>
+	<p class="exampleResult">In questa frase la parola <em>enfasi</em> risulterà enfatizzata.</p>
+	
+	<h3 id="tagP">1.6 Il tag <code>&lt;p&gt;</code>:</h3>
+	<p>Permette di scrivere un <strong>paragrafo di testo</strong>, il quale può essere composto da una o più frasi, permettendo all'autore maggiore flessibilità nel separare concetti non strettamente connessi fra loro. Ad ogni utilizzo del tag il testo seguente sarà a capo.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;p&gt;testo del paragrafo&lt;/p&gt;</code>.</p>
+	<h4>Esempio</h4>
+	<code class="exampleCode">&lt;p&gt;Questo è un paragrafo di testo. Si possono scrivere più frasi nello stesso paragrafo.&lt;/p&gt;</code>
+	<p class="exampleResult">Questo è un paragrafo di testo. Si possono scrivere più frasi nello stesso paragrafo.</p>
+	
+	<h3 id="tagUl">1.7 Il tag <code>&lt;ul&gt;</code>:</h3>
+	<p>Permette di scrivere un <strong>elenco puntato non ordinato</strong> di concetti, frasi, o parole. Ogni elemento dell'elenco può essere più o meno lungo, e composto da una sola parola o anche da più frasi.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;ul&gt;&lt;li&gt;un elemento&lt;/li&gt;&lt;li&gt;un altro elemento&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;&lt;li&gt;ancora un elemento&lt;/li&gt;&lt;/ul&gt;</code>.</p>
+	<h4>Esempio</h4>
+	<code class="exampleCode">&lt;ul&gt;
+	&lt;li&gt;elemento&lt;/li&gt;
+	&lt;li&gt;un altro elemento dell'elenco non ordinato&lt;/li&gt;
+	&lt;li&gt;uno di tanti altri elementi&lt;/li&gt;
+	&lt;li&gt;ce n'è ancora uno, bello!&lt;/li&gt;
+&lt;/ul&gt;</code>
+	<ul class="exampleResult">
+		<li>elemento</li>
+		<li>un altro elemento dell'elenco non ordinato</li>
+		<li>uno di tanti altri elementi</li>
+		<li>ce n'è ancora uno, bello!</li>
+	</ul>
+	
+	<h3 id="tagOl">1.8 Il tag <code>&lt;ol&gt;</code>:</h3>
+	<p>Permette di scrivere un <strong>elenco puntato e numerato</strong> di concetti, frasi, o parole. Ogni elemento dell'elenco può essere più o meno lungo, e composto da una sola parola o anche da più frasi.</p>
+	<h4>Sintassi</h4>
+	<p>La sintassi è <code>&lt;ol&gt;&lt;li&gt;primo elemento numerato&lt;/li&gt;&lt;li&gt;secondo elemento numerato&lt;/li&gt;&lt;li&gt;ultimo elemento numerato&lt;/li&gt;&lt;/ol&gt;</code>.</p>
+	<h4>Esempio</h4>
+	<code class="exampleCode">&lt;ol&gt;
+	&lt;li&gt;primo punto dell'elenco ordinato;&lt;/li&gt;
+	&lt;li&gt;secondo punto dell'elenco ordinato;&lt;/li&gt;
+	&lt;li&gt;terzo punto dell'elenco ordinato;&lt;/li&gt;
+	&lt;li&gt;ultimo punto dell'elenco ordinato.&lt;/li&gt;
+&lt;/ol&gt;</code>
+	<ol class="exampleResult">
+		<li>primo punto dell'elenco ordinato;</li>
+		<li>secondo punto dell'elenco ordinato;</li>
+		<li>terzo punto dell'elenco ordinato;</li>
+		<li>ultimo punto dell'elenco ordinato.</li>
+	</ol>
+	
+	
+	<h2 id="htmlLanguageXmlSyntax">2. Linguaggio <abbr title="HyperText Markup Language">HTML</abbr> con sintassi <abbr title="eXtensible Markup Language">XML</abbr></h2>
+	<p>I <a href="#allowedTags">tag <abbr title="HyperText Markup Language">HTML</abbr> usati</a> durante la stesura di una recensione devono seguire rigorosamente la <strong>sintassi <abbr title="eXtensible Markup Language">XML</abbr></strong>. Essi sono un ristretto sottoinsieme dei tag <abbr title="HyperText Markup Language">HTML</abbr> esistenti e alcuni di essi vengono utilizzati solamente per un determinato scopo non sfruttandone tutto il potenziale.</p>
+	<p>Si presti attenzione ad utilizzare solamente i tag <strong>permessi</strong> in ognuno dei singoli campi, e di rispettarne eventuali <strong>restrizioni</strong>.</p>
+	<p>Quanto necessario e permesso è esplicitato in questo manuale, per ulteriori informazioni e approfondimenti personali su tag, <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="eXtensible Markup Language">XML</abbr>, si consiglia di consultare il sito: <a href="https://www.w3schools.com/" rel="external nofollow" target="_blank" title="apri w3schools.com in una nuova finestra">w3schools.com</a>.</p>
+	
+	<h3 id="wellFormedRules">2.1 Regole di buona formazione:</h3>
+	<p>Per fornire un documento ben formato vanno sempre rispettate le regole di buona formazione per un documento <abbr title="eXtensible Markup Language">XML</abbr>.</p>
+	<p>Segue un <strong>sottoinsieme delle regole di buona formazione</strong>, necessario e sufficiente per la stesura di una recensione.</p>
+	<ul>
+		<li>i tag e gli attributi sono <span lang="en">case sensitive</span> (scrivere sempre tutto il tag in minuscolo);</li>
+		<li>i tag devono sempre essere chiusi (ovvero: <code><em>&lt;p&gt;</em>testo paragrafo<em>&lt;/p&gt;</em></code>);</li>
+		<li>i tag devono essere aperti e chiusi nell'ordine corretto (si veda la sezione <a href="#nestingTags">annidamento tag</a> per maggiori dettagli);</li>
+		<li>i valori degli attributi devono essere racchiusi tra &quot;doppie virgolette&quot;;</li>
+		<li>ogni attributo deve avere un valore, e quindi non può essere vuoto (<code>title=<em>&quot;un valore&quot;</em></code> e non <code>title=&quot;&quot;</code> oppure <code>title</code>).</li>
+	</ul>
+	<p>Si noti che anche se alcune versioni recenti dei <span lang="en">browser</span> sopperiscono alla mancata apertura o chiusura di tag aggiungendo automaticamente in fase di interpretazione e visualizzazione della pagina la parte mancante, questo non elimina l'errore. La visualizzazione a schermo potrebbe risultare corretta o meno. Non si faccia quindi nessun affidamento all'auto-completamento da parte dei <span lang="en">browser</span>, e si presti attenzione sia all'ordine sia alla corretta apertura e chiusura dei tag.</p>
+	
+	<h3 id="nestingTags">2.2 Annidamento dei tag <abbr title="HyperText Markup Language">HTML</abbr>:</h3>
+	<p>I tag: <a href="#tagSpan">&lt;span&gt;</a>, <a href="#tagAcronym">&lt;acronym&gt;</a>, <a href="#tagAbbr">&lt;abbr&gt;</a>, <a href="#tagStrong">&lt;strong&gt;</a>, ed <a href="#tagEm">&lt;em&gt;</a> possono essere contenuti in qualsiasi altro tag permesso.</p>
+	<p>Esistono regole diverse, invece, per gli altri tag:</p>
+	<ul>
+		<li>il tag <a href="#tagP">&lt;p&gt;</a> non può contenere un altro tag <a href="#tagP">&lt;p&gt;</a>;</li>
+		<li>il tag <a href="#tagP">&lt;p&gt;</a> non può né contenere né essere contenuto nei tag <a href="#tagUl">&lt;ul&gt;</a> ed <a href="#tagOl">&lt;ol&gt;</a>;</li>
+		<li>il tag &lt;li&gt; può comparire solo all'interno dei tag <a href="#tagUl">&lt;ul&gt;</a> ed <a href="#tagOl">&lt;ol&gt;</a>, e delimita ogni singolo elemento all'interno di un elenco;</li>
+		<li>il tag &lt;li&gt;, a sua volta contenuto all'interno di un tag <a href="#tagUl">&lt;ul&gt;</a> o <a href="#tagOl">&lt;ol&gt;</a>, può contenere un ulteriore tag <a href="#tagUl">&lt;ul&gt;</a> o <a href="#tagOl">&lt;ol&gt;</a>, al fine di creare un sotto-elenco (ordinato o non ordinato) all'interno dell'elenco stesso.</li>
+	</ul>
+	<p>Ogni qualvolta vi sia un annidamento tra più di un tag, <strong>ogni tag deve essere aperto e chiuso nell'ordine corretto</strong>, al fine di garantire le <a href="#wellFormedRules">regole di buona formazione</a>; semplicemente non sono permessi incroci tra aperture e chiusure di tag.</p>
+	<h4>Esempio</h4>
+	<p>Nel seguente codice le aperture e le chiusure dei tag realizzano un incrocio.</p>
+	<code class="exampleCode"><em>&lt;strong&gt;</em>Paragrafo di esempio in cui <em>&lt;em&gt;</em>l'ordine<em>&lt;/strong&gt;</em> non viene rispettato<em>&lt;/em&gt;</em>.</code>
+	<p>Nel seguente codice, invece, non ci sono incroci e rispetta quindi le regole di buona formazione.</p>
+	<code class="exampleCode"><em>&lt;strong&gt;</em>Paragrafo di esempio<em>&lt;/strong&gt;</em> in cui <em>&lt;em&gt;</em>l'ordine viene rispettato<em>&lt;/em&gt;</em>.</code>
+	<p>Il seguente codice è il modo corretto per ottenere l'effetto tentato con il primo codice (sia importanza sia enfasi alla parola "l'ordine").</p>
+	<code class="exampleCode"><em>&lt;strong&gt;</em>Paragrafo di esempio<em>&lt;/strong&gt;</em> in cui <em>&lt;em&gt;&lt;strong&gt;</em>l'ordine<em>&lt;/strong&gt;</em> viene rispettato<em>&lt;/em&gt;</em>.</code>
+	
+	
+	<h2 id="gameFields">3. Campi del gioco</h2>
+	<p>Ogni campo riguardante il gioco ha il proprio limite massimo di caratteri inseribili e potenzialmente altre restrizioni.</p>
+	<p>Si ponga l'adeguata attenzione a quanto segue durante la stesura di una recensione:</p>
+	<ol>
+		<li>ogni lettera accentata (come: à, è, é, ò, ì) verrà contata come due caratteri;</li>
+		<li>ogni altro simbolo non appartenente alle 26 lettere dell'alfabeto inglese potrebbe essere contato come più di un singolo carattere;</li>
+		<li>ogni simbolo speciale per il linguaggio <abbr title="HyperText Markup Language">HTML</abbr> non usato per inserire tag (vedi nota di fine capitoletto) sarà automaticamente convertito nella sua rispettiva entità e pertanto saranno contati un maggior numero di caratteri (ad esempio: le virgolette (<code>&quot;</code>) diventeranno <code>&amp;quot;</code> contando quindi come 6 caratteri; tra i più comuni caratteri speciali ci sono: <code>&apos;</code>, <code>&lt;</code>, <code>&gt;</code>);</li>
+		<li>ogni tag <abbr title="HyperText Markup Language">HTML</abbr> scritto in modo errato, oppure un tag rotto, oppure un tag non esistente nel linguaggio <abbr title="HyperText Markup Language">HTML</abbr> con sintassi <abbr title="eXtensible Markup Language">XML</abbr> (come: <code>&lt;song&gt;</code>, <code>&lt;p</code>, <code>&lt;nuovoTag&gt;</code>) non verranno interpretati, forzando la conversione degli eventuali caratteri speciali che li compongono ed aumentando così il numero di caratteri conteggiati;</li>
+		<li>ogni tag scritto correttamente ma non aperto o chiuso adeguatamente non subirà la conversione forzata dei caratteri speciali e quindi non aumenterà il numero di caratteri conteggiati, ma consiste ugualmente in un errore che potrebbe inficiare la corretta visualizzazione della recensione.</li>
+	</ol>
+	<p>Se si ricade in uno dei casi sopracitati, <strong>la lunghezza del testo calcolata dal <span lang="en">server</span> potrebbe non corrispondere all'effettivo numero di caratteri</strong> digitati manualmente. In questi casi si consiglia di riscrivere il testo cercando di commettere il minor numero possibile di errori, riformulare in forma più breve alcuni concetti, e se necessario eliminare parte del testo che si intendeva scrivere.</p>
+	<p><strong>Nota:</strong> i simboli <code>&lt;</code>, <code>&gt;</code>, e <code>&quot;</code> utilizzati per inserire in modo corretto l'apertura e la chiusura di un tag (in un campo nel quale tale tag sia permesso) non verranno convertiti in entità <abbr title="HyperText Markup Language">HTML</abbr> e conteranno come caratteri singoli.</p>
+	
+	<h3 id="gameTitle">3.1 Titolo del gioco:</h3>
+	<p>Il <em>titolo del gioco</em> rappresenta il nome del videogioco che si vuole recensire.</p>
+	<p>Tale campo deve avere una lunghezza <strong>minima di 1</strong> e <strong>massima di 255</strong> caratteri. Rispettando le regole spiegate all'inizio della sezione <a href="#gameFields">campi del gioco</a>.</p>
+	<p>I tag permessi sono: <a href="#tagSpan">&lt;span&gt;</a>, <a href="#tagAcronym">&lt;acronym&gt;</a>, <a href="#tagAbbr">&lt;abbr&gt;</a>.</p>
+	<h4>Note</h4>
+	<p>La coppia di campi <em>Titolo gioco</em> e <em>Anno pubblicazione</em> non ammette duplicati; quindi se durante l'inserimento di una recensione si tenterà di inserire una coppia già presente nel <span lang="en">database</span> verrà generato un errore e l'inserimento fallirà. In tal caso si prega di verificare di aver inserito i dati in modo corretto, e che la recensione di tale videogioco non sia già presente nel sistema (se lo fosse si valuti la possibilità di modificare la recensione già presente).</p>
+	
+	<h3 id="coverImage">3.2 Immagine di copertina:</h3>
+	<p>L'<em>immagine di copertina</em> è un'immagine evocativa del gioco che si vuole recensire. Tale campo deve rispettare le seguenti regole, pena il rifiuto del file e l'emissione di un errore:</p>
+	<ol>
+		<li>il <span lang="en">file</span> caricato deve essere un <span lang="en">file</span> immagine;</li>
+		<li>la dimensione complessiva del <span lang="en">file</span> immagine caricato non deve superare i <em>512<abbr title="kilobyte">kB</abbr></em>;</li>
+		<li>i formati per il <span lang="en">file</span> immagine supportati sono: <em>.png, .jpg e .jpeg</em>;</li>
+		<li>il <span lang="en">file</span> immagine caricato non deve superare i <em>512 <span lang="en">pixel</span> di larghezza</em>, e i <em>720 <span lang="en">pixel</span> di altezza</em>;</li>
+		<li>si consiglia di caricare file immagini con un rapporto d'aspetto di circa <em>0,7:1</em>.</li>
+	</ol>
+	<p>Non è permesso l'inserimento di <strong>nessun tag</strong> <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	
+	<h3 id="coverDescription">3.3 Descrizione dell'immagine di copertina:</h3>
+	<p>La <em>descrizione dell'immagine di copertina</em> dovrebbe descrivere ciò che visivamente si coglie guardando il <span lang="en">file</span> caricato come immagine di copertina. Sopperisce alla mancanza dell'immagine per utenti non vedenti, per utilizzatori di <span lang="en">browser</span> testuali e per i motori di ricerca che la devono indicizzare.</p>
+	<p>Tale campo deve avere una lunghezza <strong>minima di 1</strong> e <strong>massima di 255</strong> caratteri. Rispettando le regole spiegate all'inizio della sezione <a href="#gameFields">campi del gioco</a>.</p>
+	<p>I tag permessi sono: <a href="#tagSpan">&lt;span&gt;</a>, <a href="#tagAcronym">&lt;acronym&gt;</a>, <a href="#tagAbbr">&lt;abbr&gt;</a>.</p>
+	
+	<h3 id="developer">3.4 Sviluppatore:</h3>
+	<p>Lo <em>sviluppatore</em> è l'azienda o la persona che ha sviluppato il gioco stesso.</p>
+	<p>Tale campo deve avere una lunghezza <strong>minima di 1</strong> e <strong>massima di 255</strong> caratteri. Rispettando le regole spiegate all'inizio della sezione <a href="#gameFields">campi del gioco</a>.</p>
+	<p>I tag permessi sono: <a href="#tagSpan">&lt;span&gt;</a>, <a href="#tagAcronym">&lt;acronym&gt;</a>, <a href="#tagAbbr">&lt;abbr&gt;</a>.</p>
+	
+	<h3 id="releaseYear">3.5 Anno di pubblicazione:</h3>
+	<p>L'<em>anno di pubblicazione</em> è l'anno in cui il videogioco che si vuole recensire è stato pubblicato in <strong>territorio europeo</strong> (nel caso in cui non sia mai uscito in Europa si indichi l'anno della pubblicazione internazionale e ancora l'anno di pubblicazione nel paese d'origine).</p>
+	<p>Tale campo deve avere un contenuto numerico di <strong>4 cifre</strong> compreso tra il 1970 e il 2099 (estremi inclusi).</p>
+	<p>Non è permesso l'inserimento di <strong>nessun tag</strong> <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	<h4>Note</h4>
+	<p>La coppia di campi <em>Titolo gioco</em> e <em>Anno pubblicazione</em> non ammette duplicati; quindi se durante l'inserimento di una recensione si tenterà di inserire una coppia già presente nel <span lang="en">database</span> verrà generato un errore e l'inserimento fallirà. In tal caso si prega di verificare di aver inserito i dati in modo corretto, e che la recensione di tale videogioco non sia già presente nel sistema (se lo fosse si valuti la possibilità di modificare la recensione già presente).</p>
+	
+	<h3 id="platforms">3.6 Elenco delle piattaforme:</h3>
+	<p>L'<em>elenco di piattaforme</em> fornisce una lista di piattaforme correlate ad una loro versione; si scelga tra le proposte quelle sulle quali è possibile eseguire il videogioco che si vuole recensire.</p>
+	<p><strong>Almeno una piattaforma</strong> deve essere indicata, e non vi è alcun limite massimo di piattaforme selezionabili.</p>
+	<p>Se alcune non sono presenti, si eviti di indicarle; nel qual caso si ritenga utile la loro aggiunta (perchè vi sono molti videogiochi da poter recensire o già recensiti per tale piattaforma), è possibile <a href="aboutus.html">contattare lo <span lang="en">staff</span></a> suggerendone l'inserimento che eventualmente avverrà durante il successivo aggiornamento dell'infrastruttura <span lang="en">server</span>.</p>
+	<p>Non è permesso l'inserimento di <strong>nessun tag</strong> <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	
+	<h3 id="genres">3.7 Elenco dei generi:</h3>
+	<p>L'<em>elenco di generi</em> fornisce una lista di generi di videogiochi; si scelga tra i proposti quelli a cui appartiene il videogioco che si vuole recensire.</p>
+	<p><strong>Almeno un genere</strong> deve essere indicato, e non vi è alcun limite massimo di generi selezionabili.</p>
+	<p>Se alcuni non sono presenti, si eviti di indicarli; nel qual caso si ritenga utile la loro aggiunta (perchè vi sono molti videogiochi da poter recensire o già recensiti di tale genere), è possibile <a href="aboutus.html">contattare lo <span lang="en">staff</span></a> suggerendone l'inserimento che eventualmente avverrà durante il successivo aggiornamento dell'infrastruttura <span lang="en">server</span>.</p>
+	<p>Non è permesso l'inserimento di <strong>nessun tag</strong> <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	
+	<h3 id="officialSite">3.8 Sito ufficiale:</h3>
+	<p>Il <em>sito ufficiale</em> del videogioco che si vuole recensire è un campo <strong>non obbligatorio</strong>, e se indicato deve contenere l'<acronym title="Uniform Resource Locator">URL</acronym> completo del sito ufficiale del gioco, sia esso in italiano, inglese, o multilingua.</p>
+	<p>Se non si intende inserire nessun sito ufficiale, sia perchè non esiste, sia perchè non si ha la possibilità di reperirlo, si lasci vuoto questo campo.</p>
+	<p>Se lo si vuole inserire vanno rispettare le seguenti regole:</p>
+	<ol>
+		<li>la lunghezza massima del campo è di <em>128 caratteri</em>;</li>
+		<li>il conteggio dei caratteri potrebbe differire dal numero di caratteri effettivamente inseriti (si vedano le regole d'inizio sezione <a href="#gameFields">campi del gioco</a>).</li>
+		<li>l'<acronym title="Uniform Resource Locator">URL</acronym> del sito dev'essere completo;</li>
+		<li>il formato dell'<acronym title="Uniform Resource Locator">URL</acronym> deve rispettare la seguente sintassi: <code>protocollo://indirizzo</code></li>
+		<li>per dipanare qualsiasi dubbio, segue un esempio di sintassi per tale campo: <code>http://example.com/example/page/</code></li>
+	</ol>
+	<p>Non è permesso l'inserimento di <strong>nessun tag</strong> <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	
+	<h3 id="pegi">3.9 <acronym title="Pan European Game Information">PEGI</acronym>:</h3>
+	<p>Il <em><acronym title="Pan European Game Information">PEGI</acronym></em> del videogioco che si vuole recensire è il metodo di classificazione valido su tutto il territorio europeo usato per classificare i videogiochi attraverso cinque fasce d'età.</p>
+	<p>Tale campo <strong>deve essere selezionato</strong> tra uno dei cinque elementi del <span lang="en">select menu</span>.</p>
+	<p>Non è permesso l'inserimento di <strong>nessun tag</strong> <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	<p>Per ulteriori informazioni e approfondimenti personali sul <acronym title="Pan European Game Information">PEGI</acronym>, si consiglia di consultare il sito ufficiale: <a href="http://www.pegi.info/" rel="external nofollow" target="_blank" title="apri pegi.info in una nuova finestra">pegi.info</a>.</p>
+	
+	
+	<h2 id="reviewFields">4. Campi della recensione</h2>
+	<p>Ogni campo riguardante la recensione di un videogioco ha il proprio limite massimo di caratteri inseribili e potenzialmente altre restrizioni.</p>
+	<p>Quanto riportato all'inizio della sezione <a href="#gameFields">campi del gioco</a> si applica anche alla compilazione dei campi della recensione vera e propria.</p>
+	
+	<h3 id="reviewTitle">4.1 Titolo della recensione:</h3>
+	<p>Il <em>titolo della recensione</em> rappresenta il titolo del testo che si vuole scrivere.</p>
+	<p>Tale campo deve avere una lunghezza <strong>minima di 1</strong> e <strong>massima di 255</strong> caratteri. Rispettando le regole spiegate all'inizio della sezione <a href="#gameFields">campi del gioco</a>.</p>
+	<p>I tag permessi sono: <a href="#tagSpan">&lt;span&gt;</a>, <a href="#tagAcronym">&lt;acronym&gt;</a>, <a href="#tagAbbr">&lt;abbr&gt;</a>.</p>
+	
+	<h3 id="shortDescription">4.2 Breve descrizione o anteprima della recensione:</h3>
+	<p>La <em>breve descrizione della recenzione</em> è un'anteprima che dovrebbe fornire l'idea ed i concetti principali che sono trattati in modo più ampio e approfondito nel corpo della recensione stessa.</p>
+	<p>Tale campo deve avere una lunghezza <strong>minima di 1</strong> e <strong>massima di 150</strong> caratteri. Rispettando le regole spiegate all'inizio della sezione <a href="#gameFields">campi del gioco</a>.</p>
+	<p>Non è permesso l'inserimento di <strong>nessun tag</strong> <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	
+	<h3 id="reviewContent">4.3 Contenuto della recensione:</h3>
+	<p>Il <em>contenuto</em> è il vero e proprio corpo della recensione, composto da un lungo testo ad opera dell'amministratore stesso. In altre parole è il cuore della stesura di una recensione.</p>
+	<p>Tale campo deve avere una lunghezza <strong>minima di 1</strong> e <strong>massima di 65535</strong> caratteri. Rispettando le regole spiegate all'inizio della sezione <a href="#gameFields">campi del gioco</a>.</p>
+	<p>I tag permessi sono: <a href="#tagSpan">&lt;span&gt;</a>, <a href="#tagAcronym">&lt;acronym&gt;</a>, <a href="#tagAbbr">&lt;abbr&gt;</a>, <a href="#tagStrong">&lt;strong&gt;</a>, <a href="#tagEm">&lt;em&gt;</a>, <a href="#tagP">&lt;p&gt;</a>, <a href="#tagUl">&lt;ul&gt;</a>, <a href="#tagOl">&lt;ol&gt;</a>, &lt;li&gt;.</p>
+	<h4>Note</h4>
+	<p>Per scrivere una recensione utilizzando i tag <abbr title="HyperText Markup Language">HTML</abbr> in modo <strong>corretto e ben formato</strong>, si consiglia di racchiudere sempre tra un'apertura ed una chiusura del tag <a href="#tagP">&lt;p&gt;</a> ogni paragrafo della recensione. Si ricordi però che i tag <a href="#tagUl">&lt;ul&gt;</a> ed <a href="#tagOl">&lt;ol&gt;</a> non possono essere contenuti ne contenere il tag <a href="#tagP">&lt;p&gt;</a> (si veda l'apposita sezione riguardante l'<a href="#nestingTags">annidamento dei tag</a>).</p>
+</div> <!-- chiude content -->
+<footer>
+	<nav id="menufooter">
+		<ul>
+			<li><a href="aboutus.html">Chi siamo</a></li>
+			<li><a href="privacy.html">Note legali</a></li>
+			<li><a href="accessibility.html">Accessibilità</a></li>
+			<li><a href="sitemap.html">Mappa del sito</a></li>
+		</ul>
+	</nav>
+	<p class="copyright">© <time datetime="2017">2017</time> Prism <span lang="en">Game Reviews</span> - Tutti i diritti riservati</p>
+</footer>
+</body>
+</html>

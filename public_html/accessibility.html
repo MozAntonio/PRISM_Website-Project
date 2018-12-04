@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> -->
+	<meta charset="utf-8" />
+	<title>Accessibilità - Prism Game Reviews</title> <!-- dal particolare al generale -->
+	
+	<!-- meta -->
+	<meta name="description" content="L'accessibilità del sito di Prism Game Reviews." /> <!-- max 150 char -->
+	<meta name="keywords" content="accessibilità,accessibility,WCAG,WAI,Web Content Accessibility Guidelines,screen reader,Prism Game Reviews,recensioni,videogiochi,video giochi" /> <!-- max 10 -->
+	<meta name="author" content="Prism" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="all" />
+	
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="style/prismdefault.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="style/mobile.css" media="handheld, screen and (max-width:768px), only screen and (max-device-width:768px)" />
+	<!-- <link rel="stylesheet" type="text/css" href="style/prismdefault.css" media="all" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="style/mobile.css" media="screen and (max-width:768px)" /> -->
+	<link rel="stylesheet" type="text/css" href="style/print.css" media="print" />
+	<link rel="shortcut icon" href="images/favicon.png" />
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet" />
+	
+	<!-- script -->
+	<script src="js/modernizr.3.5.0.custom.min.js" type="text/javascript"></script>
+	<!--[if !IE]>-->
+	<script src="js/user.js" type="text/javascript"></script>
+	<!--<![endif]-->
+	
+	<!-- backward compatibility -->
+	<!--[if gt IE 7]>
+	<script src="js/user.js" type="text/javascript"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+	<![endif]-->
+	
+	<!-- licenses --> 
+		<!-- open sans ALv2 -->
+		<!-- modernizr MIT -->
+		<!-- html5shiv MIT -->
+</head>
+
+
+
+<body onload="addEventsHamburger()">
+
+<nav class="skipSection"><a href="#content">salta menu e vai al contenuto</a></nav>
+<header>
+	<div id="logoBlock">
+		<span id="logo"></span>
+		<h1 lang="en"><span class="accent">P</span>rism <span class="accent">G</span>ame <span class="accent">R</span>eviews</h1>
+	</div>
+	<nav id="menu">
+		<ul>
+			<li id="login"><ul>
+				<li><a href="php/profile.php">Profilo</a></li>
+			</ul></li>
+			<li id="mainMenu"><ul>
+				<li><a href="index.html" lang="en">Home</a></li>
+				<li><a href="php/searchByPlatform.php">Piattaforma</a></li>
+				<li><a href="php/searchByGenre.php">Genere</a></li>
+				<li><a href="searchByAZ.html"><abbr title="Lettera dell'Alfabeto">A-Z</abbr></a></li>
+			</ul></li>
+		</ul>
+	</nav>
+</header>
+
+<nav class="skipSection"><a href="#content">salta <span lang="en">breadcrumb</span> e vai al contenuto</a></nav>
+<nav id="breadcrumb">
+	<p>Ti trovi in: </p>
+	<ul>
+		<li>Accessibilità</li>
+	</ul>
+</nav>
+<div id="content">
+	<h1>Accessibilità</h1>
+	<p>Questo sito è stato realizzato con un occhio di riguardo nei confronti dell'accessibilità per finalità accademiche e per rendere fruibile il suo contenuto in modo efficace e soddisfacente a tutti gli utenti, anche da coloro che si trovino in condizioni di "svantaggio".</p>
+	<p>Con questa finalità sono stati seguiti gli standard promossi dal <abbr title="World Wide Web Consortium">W3C</abbr> e le raccomandazioni <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> 2.0.</p>
+	<p>In questa pagina sono raccolte per sommi capi le azioni intraprese da <a href="index.html" lang="en">Prism Game Reviews</a> per rendere il più possibile il proprio contenuto accessibile. Allo scopo di mantenere un corretto contenuto dell'intero sito nel corso del tempo è stato reso possibile l'inserimento di alcuni <span lang="en">tag</span> <abbr title="HyperText Markup Language">HTML</abbr> che migliorano l'accessibilità nella compilazione delle <span lang="en">form</span>, con la speranza che anche il materiale inserito dagli utenti stessi sia nel miglior modo un contenuto corretto ed accessibile.</p>
+	
+	<h2>Separazione tra contenuto, presentazione e struttura</h2>
+	<p>Tenere il più possibile una separazione tra contenuto, presentazione e struttura, oltre ad aumentare la mantenibilità e la chiarezza delle parti del sito, permette l'indipendenza dal dispositivo con il quale lo si visita.</p>
+	<p>Il <span lang="en">responsive design</span> adatta il sito elegantemente anche a dispositivi dotati di schermi più piccoli ed avendo usato i corretti marcatori strutturali le pagine sono consultabili anche solo con il <abbr title="Cascading Style Sheets">CSS</abbr> dei <span lang="en">browser</span> senza fare affidamento al colore o ad elementi spaziali durante la navigazione.</p>
+	
+	<h2>Aiuti alla navigazione</h2>
+	<p>Nelle pagine di lettura delle recensioni, appena dopo il titolo, vi sono dei <span lang="en">link</span> di navigazione interna per poter passare direttamente all'area di interesse, e dualmente è presente un <span lang="en">link</span> per tornare all'inzio della pagina appena prima della sezione dei commenti. Tali aiuti sono particolarmente utili su dispositivi <span lang="en">mobile</span> che per loro natura dispongono il contenuto in modo stretto e molto lungo, e per coloro che effettuano una navigazione da tastiera.</p>
+	<p>I dispositivi mobili, tipicamente dotati di uno schermo di piccole dimensioni, necessitano di bottoni e <span lang="en">link</span> grandi per agevolarne l'interazione tramite le dita. Inoltre il menu, i <span lang="en">link</span> di navigazione interna ed altri elementi operazionali sono sempre sulla parte destra o al centro per facilitare la navigazione con una sola mano. La voce "Profilo" è sempre disponibile nella barra del menu così da velocizzare le fasi di <span lang="en">login</span> e <span lang="en">logout</span>.</p>
+	<p>Per chi fa uso di lettori di schermo o della navigazione da tastiera sono presenti anche dei <span lang="en">link</span> per il salto dei menu, questi <span lang="en">link</span> sono nascosti fuori dall'area visibile tramite <abbr title="Cascading Style Sheets">CSS</abbr> ma se ricevono il <span lang="en">focus</span> rientrano temporaneamente (fino alla perdita di questo) a lato dello schermo ad indicare la posizione corrente del <span lang="en">focus</span>, inoltre vantano un testo che indica cosa permettono di saltare e dove si arriva seguendoli.</p>
+	<p>C'è la possibilità che l'utente desideri aggiungere ai preferiti una qualunque pagina che è quindi sempre dotata di un titolo significativo e continene eventuali parametri nell'<acronym title="Uniform Resource Locator">URL</acronym> ove necessario.</p>
+	<p>Come ultima risorsa è presente una <a href="sitemap.html">mappa del sito</a>.</p>
+	
+	<h2>Il testo</h2>
+	<p>Il tipo di <span lang="en">font</span>, la sua grandezza nei diversi contesti e la spaziatura tra i paragrafi (soprattutto nel <span lang="en">layout mobile</span>) agevolano il più possibile tutte le categorie di utenti, non essendo <span lang="en">font</span> troppo elaborati o spaziature poco chiare.</p>
+	<p>Le parole in lingua straniera dell'intero sito sono state opportunamente segnalate tramite un attributo "<span lang="en">lang</span>" che ne identifica la lingua, le abbreviazioni e gli acronimi sono stati marcati come tali grazie ai <span lang="en">tag</span> <abbr title="HyperText Markup Language">HTML</abbr> appositi dotati a loro volta di un attributo "<span lang="en">title</span>" che riporta la dicitura estesa degli stessi. Tale impegno è atto a migliorare la consultazione del sito e la lettura del contenuto anche per gli utenti che fanno uso di <span lang="en">screen reader</span> e per una miglior indicizzazione da parte dei motori di ricerca.</p>
+	<p>Inoltre sono presenti alcuni testi posizionati poi fuori dallo schermo grazie al <abbr title="Cascading Style Sheets">CSS</abbr> che facilitano la comprensione del contenuto agli utenti non vedenti che fanno uso di lettori di schermo.</p>
+	
+	<h2>Le immagini</h2>
+	<p>Ogni immagine che fa parte del contenuto del sito è provvista di un adeguato attributo "<span lang="en">alt</span>" che riporta un'indicazione su ciò che raffigura l'immagine, così da poter garantire una completa fruizione del loro contenuto anche alle persone con difficoltà visive ed a coloro che usano <span lang="en">browser</span> testuali o che non riescono a visualizzare correttamente l'immagine per qualsivoglia motivo.</p>
+	<p>Inoltre le immagini di copertina dei giochi nelle pagine di lettura delle recensioni sono accompagnate anche da una breve didascalia.</p>
+	
+	<h2>Le <span lang="en">form</span></h2>
+	<p>Per avvantaggiare ogni utente, tutti i campi delle <span lang="en">form</span> sono accompagnati da un'etichetta che ne indica il significato, i campi maggiormente complessi sono forniti di aiuti alla compilazione e vi sono dei <span lang="en">placeholder</span> con lo scopo di chiarire ogni dubbio.</p>
+	<p>Al fine di migliorarne struttura e accessibilità, ogni <span lang="en">form</span> è dotata di un titolo per ogni sezione logicamente interconnessa.</p>
+	
+	<h2>I <span lang="en">link</span></h2>
+	<p>I <span lang="en">link</span> dell'intero sito sono di colore blu in modo da renderli immediatamente identificabili all'interno della pagina. Fanno eccezione i <span lang="en">link</span> del <span lang="en">footer</span> e gli eventuali <span lang="en">link</span> del <span lang="en">breadcrumb</span> di colore bianco per motivi di contrasto con lo sfondo scuro.</p>
+	<p>Tutti i <span lang="en">link</span> in stato di <span lang="en">hover</span> guadagnano una sottolineatura, inoltre in tale stato i <span lang="en">link</span>-bottoni (<abbr title="esempio">es</abbr>: quelli di menu, <span lang="en">footer</span>, <abbr title="eccetera">ecc</abbr>) evidenziano la loro area cliccabile invertendo i colori di testo e sfondo.</p>
+	<p>I <span lang="en">link</span> non bottoni, se visitati, diventano di colore viola a distinguere le aree visitate da quelle non visitate.</p>
+	<p>Il testo dei <span lang="en">link</span> è il più significativo possibile e, dove necessario, è stato aggiunto un attributo "<span lang="en">title</span>" che chiarifica la loro destinazione, in modo che non si verifichino situazioni disorientanti.</p>
+	<p>Inoltre i <span lang="en">link</span> esterni e quelli che si aprono in una nuova finestra, per non sorprendere l'utente più attento, lo riportano nel "<span lang="en">title</span>".</p>
+	
+	<h2>Validazione e <span lang="en">Test</span></h2>
+	<h3>I colori e i contrasti</h3>
+	<p>Il testo e i <span lang="en">link</span> di <span lang="en">breadcrumb</span> e <span lang="en">footer</span> rispettano i valori di contrasto previsti dalle <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> 2.0 per il livello <abbr title="tripla A">AAA</abbr>.</p>
+	<p>Gli altri <span lang="en">link</span> e gli errori nelle form hanno invece un contrasto sufficiente per il livello <abbr title="doppia A">AA</abbr>.</p>
+	<p>Il sito è stato sottoposto ad un <span lang="en">test</span> per verificarne l'aspetto che avrebbe per gli utenti affetti da cecità cromatica, ed è parso accessibile e comprensibile.</p>
+
+	<h3><span lang="en">Test</span> automatici</h3>
+	<p>Le pagine del sito validano in <abbr title="HyperText Markup Language">HTML</abbr>5 e <abbr title="Cascading Style Sheets">CSS</abbr>3 secondo il validatore del <abbr title="World Wide Web Consortium">W3C</abbr> (gli eventuali errori ed avvisi riportati sono stati trascurati per poter garantire una miglior retrocompatibilità e poter raggiungere un più ampio raggio di utenti destinatari).</p>
+	<p>Il sito è anche stato sottoposto ai <span lang="en">test</span> automatici di <a href="http://achecker.ca/checker/index.php" rel="external nofollow" target="_blank" title="apri AChecker in una nuova finestra" lang="en">AChecker</a> e <a href="http://www.totalvalidator.com/" rel="external nofollow" target="_blank" title="apri Total Validator in una nuova finestra" lang="en">Total Validator</a>, i quali non hanno evidenziato errori verificando il sito per le <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> 2.0 livello <abbr title="tripla A">AAA</abbr> (ad eccezione di quanto detto per i contrasti di livello <abbr title="doppia A">AA</abbr>).</p>
+	<p>Data la natura dei <span lang="en">test</span> sopracitati lo <span lang="en">staff</span> di <span lang="en">Prism Game Reviews</span> si scusa anticipatamente per l'eventuale contenuto non totalmente accessibile a tutte le categorie di utenti. Vi preghiamo di segnalarci ogni irregolarità o difficoltà riscontrata scrivendo a <a href="mailto:prism.gamereviews@gmail.com">prism.gamereviews@gmail.com</a>.</p>
+	<p class="lastUpdate">Ultimo aggiornamento: <time datetime="2017-08">Agosto 2017</time></p>
+	
+</div> <!-- chiude content -->
+<footer>
+	<nav id="menufooter">
+		<ul>
+			<li><a href="aboutus.html">Chi siamo</a></li>
+			<li><a href="privacy.html">Note legali</a></li>
+			<li id="currentLink">Accessibilità</li>
+			<li><a href="sitemap.html">Mappa del sito</a></li>
+		</ul>
+	</nav>
+	<p class="copyright">© <time datetime="2017">2017</time> Prism <span lang="en">Game Reviews</span> - Tutti i diritti riservati</p>
+</footer>
+</body>
+</html>

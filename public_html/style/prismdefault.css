@@ -1,0 +1,1422 @@
+/**
+ * Contenuto:
+ *   > normalize.css ................. line: 25
+ *   > prismdefault.css .............. line: 291
+ *      - Document & General
+ *      - Accessibility
+ *      - Header
+ *      - Nav Breadcrumb
+ *      - Nav Pagination
+ *      - Content
+ *      - Read Review
+ *      - Form
+ *      - Home Page
+ *      - 404
+ *      - Footer
+ *
+ * Dipendenze:
+ *   > nessuna
+**/
+
+ 
+ 
+
+
+/* === normalize.css === */
+/**
+ * Quanto segue sono delle regole di reset note come "normalize.css".
+ * Basate su quanto reperibile qui: necolas.github.io/normalize.css/
+ * Sono state ristrette a quanto ritenuto necessario.
+ * normalize vs reset: the-pastry-box-project.net/oli-studholme/2013-june-3
+**/
+ 
+/*! based on: normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+
+/* == Document == */
+
+/*
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+	line-height: 1.15; /* 1 */
+	font-size: 1em;
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* == Sections == */
+
+/* Remove the margin in all browsers (opinionated). */
+body {
+	margin: 0;
+}
+
+/* Add the correct display in IE 9-. */
+article,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+
+/*
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* == Grouping content == */
+
+/* Add the correct display in IE 9-. */
+figcaption,
+figure {
+	display: block;
+}
+
+/* Add the correct margin in IE 8. */
+figure {
+	margin: 1em 40px;
+}
+
+/*
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/* == Text-level semantics == */
+
+/*
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+	background-color: transparent; /* 1 */
+	-webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/* Remove the bottom border in Chrome 57- and Firefox 39-. */
+abbr[title] {
+	border-bottom: none;
+}
+
+/* Prevent the duplicate application of `bolder` by the next rule in Safari 6. */
+b,
+strong {
+	font-weight: inherit;
+}
+
+/* Add the correct font weight in Chrome, Edge, and Safari. */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/*
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/* == Embedded content == */
+
+/* Remove the border on images inside links in IE 10-. */
+img {
+	border-style: none;
+}
+
+/* Hide the overflow in IE9+. */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* == Forms == */
+
+/*
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: sans-serif; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/*
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+	overflow: visible;
+}
+
+/*
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/*
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+}
+
+/* Remove the inner border and padding in Firefox. */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/* Restore the focus styles unset by the previous rule. */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/* Correct the padding in Firefox. */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/*
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
+}
+
+/* Remove the default vertical scrollbar in IE. */
+textarea {
+	overflow: auto;
+}
+
+/*
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/* Correct the cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/*
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/* Remove the inner padding and cancel buttons in Chrome and Safari on macOS. */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/*
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/* == Hidden == */
+
+/* Add the correct display in IE 10-. */
+[hidden] {
+	display: none;
+}
+
+/* Fine Normalize */
+
+
+
+
+
+
+/* === prismdefault.css === */
+/**
+ * Questo file costituisce il CSS principale di Prism Game Reviews.
+**/
+ 
+/*! PrismGame | prismdefault.css */
+
+
+/* == Document & General == */
+
+html,
+body {
+	/* INHERITANCE for tag <html>
+	line-height: 1.15;
+	font-size: 1em;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%; */
+	
+	/* INHERITANCE for tag <body>
+	margin: 0; */
+	
+	font-family: "Open Sans", Arial, Helevetica, sans-serif;
+	background-color: #F1F1F1;
+	color: #181818;
+	word-wrap: break-word; /* evita che parole lunghissime spacchino il layout */
+	min-width: 320px;
+}
+
+code,
+pre {
+	/* INHERITANCE for tag <pre>
+	font-family: monospace, monospace;
+	font-size: 1em; */
+	
+	font-family: "Courier New", Courier, monospace;
+	vertical-align: middle;
+}
+
+abbr[title],
+acronym[title] {
+	/* INHERITANCE for tag <abbr>
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted; */
+	
+	text-decoration: none;
+	cursor: help;
+}
+
+a abbr[title],
+a acronym[title] {
+	cursor: pointer;
+}
+
+/* order: "link-visited-hover-active */
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #2255FF;
+}
+
+a:visited {
+	color: #AA22FF;
+}
+
+a:hover,
+a:active,
+a:focus,
+button:hover,
+button:active,
+button:focus,
+form #editReviewButton:hover,
+form #editReviewButton:active,
+form #editReviewButton:focus,
+form #logout:hover,
+form #logout:active,
+form #logout:focus,
+#menuIcon:hover,
+#menuIcon:active,
+#menuIcon:focus {
+	text-decoration: underline;
+}
+
+/*a[rel~=external]:before {
+	content: "\2197 ";
+}*/
+
+nav a,
+#currentLink {
+	padding: 0.6em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+nav a {
+	display: block;
+	-webkit-transition: 0.25s linear; /* chrome 4.0-26.0 e safari 3.1-6.1 */
+	-o-transition: 0.25s linear; /* opera 10.5-12.1 */
+	-moz-transition: 0.25s linear; /* mozilla 4.0-16.0 */
+	transition: 0.25s linear; /* CSS3 e IE 10+ */
+}
+
+nav a:visited {
+	color: #2255FF;
+}
+
+nav a:hover,
+nav a:active,
+#currentLink,
+#currentPage {
+	color: white;
+	background-color: #2255FF;
+}
+
+.accent {
+	color: #2255FF;
+}
+
+.errori,
+.erroriForm {
+	color: #DB0000;
+}
+
+.placeholderMessage {
+	color: #757575;
+}
+
+.ltIE9-no-js div {
+	border: 1px solid #181818;
+    padding: 10px;
+}
+
+.ltIE9-no-js h1 {
+	color: #DB0000;
+}
+
+
+/* == Accessibility == */
+
+.skipSection a,
+.skipHelper a {
+	position: absolute;
+	top: auto;
+	left: -40em;
+	background-color: white;
+	text-transform: none;
+	font-weight: normal;
+	max-width: 10em;
+	-webkit-transition: left 1s ease-out; /* chrome 4.0-26.0 e safari 3.1-6.1 */
+	-o-transition: left 1s ease-out; /* opera 10.5-12.1 */
+	-moz-transition: left 1s ease-out; /* mozilla 4.0-16.0 */
+	transition: left 1s ease-out; /* CSS3 e IE 10+ */
+}
+
+.skipSection a:focus,
+.skipHelper a:focus {
+	position: absolute; /* per sicurezza */
+	top: auto; /* per sicurezza */
+	left: 0;
+	border: 1px solid #2255FF;
+	-webkit-transition: none; /* chrome 4.0-26.0 e safari 3.1-6.1 */
+	-o-transition: none; /* opera 10.5-12.1 */
+	-moz-transition: none; /* mozilla 4.0-16.0 */
+	transition: none; /* CSS3 e IE 10+ */
+}
+
+#content .goToSection {
+	margin: 0 0 1em;
+}
+
+.goToSection {
+	text-align: right;
+}
+
+.goToSection a {
+	margin-left: 1em;
+	padding: 0;
+	text-transform: none;
+	font-weight: normal;
+}
+
+.goToSection a:hover,
+.goToSection a:active {
+	color: #2255FF;
+	background-color: transparent;
+	-webkit-transition: none; /* chrome 4.0-26.0 e safari 3.1-6.1 */
+	-o-transition: none; /* opera 10.5-12.1 */
+	-moz-transition: none; /* mozilla 4.0-16.0 */
+	transition: none; /* CSS3 e IE 10+ */
+}
+
+.scn-rdr {
+	position: absolute;
+	top: auto;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+
+/* == Header == */
+
+body > header {
+	margin: auto;
+	max-width: 1024px;
+	background-color: white;
+	overflow: hidden;
+	padding: 0;
+	padding-left: calc((100% - 1024px)/2);
+	padding-right: calc((100% - 1024px)/2);
+	/* padding: 0 calc((100% - 1024px)/2); */
+}
+
+#logoBlock,
+#menu {
+	margin: 0;
+	padding: 0;
+	min-height: 5.5em;
+	line-height: 1.1em;
+} /* fa in modo che tutto l'header abbia la stessa altezza */
+
+#logoBlock {
+	/* INHERITANCE from tag <html>, <body>, <header> */
+	
+	max-width: 29%;
+	float: left;
+	border-left: 1px solid #EEEEEE;
+	text-align: center;
+}
+
+#menu {
+	/* INHERITANCE from tag <html>, <body>, <header>, <nav> */
+	
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	overflow: hidden;
+}
+
+#logoBlock h1 {
+	/* INHERITANCE for tag <h1>
+	font-size: 2em;
+	margin: 0.67em 0; */
+	
+	margin: 1.2em 0.5em auto auto;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+#logoBlock #logo {
+	/* INHERITANCE from tag <html>, <body>, <header> and from "#logoBlock" */
+	
+	float: left;
+	margin: 0.5em 0 0.5em 0.5em;
+	width: 4.5em;
+	height: 4.5em;
+	background-image: url('../images/logoprism.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto; /* width hight */ /* CSS3 */
+}
+.no-backgroundsize #logoBlock #logo {
+	background-image: url('../images/favicon.png');
+}
+
+#menu ul {
+	/* INHERITANCE from tag <html>, <body>, <header>, <nav> */
+	margin: 1.6em auto auto 0.3em;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden; /* TEMP */
+}
+
+#menu ul li {
+	float: left;
+	margin-right: 0.2em;
+}
+
+#menu ul li ul {
+	margin: 0;
+}
+
+#menu #mainMenu {
+	/* INHERITANCE from tag <html>, <body>, <header>, <nav> */
+	margin: 0;
+	padding: 0; /* per sicurezza */
+}
+
+#menu #menuIcon {
+	/* INHERITANCE from tag <html>, <body>, <header>, <nav> */
+	display: none;
+}
+
+#menu #login {
+	float: right; /* mette profilo a dx */
+	margin-right: 0;
+}
+
+
+/* == Nav Breadcrumb == */
+
+#breadcrumb {
+	clear: both;
+	margin: auto;
+	margin-bottom: 1em;
+	max-width: 1024px;
+	font-size: 0.9em;
+	color: white;
+	background-color: #505050;
+	border-bottom: solid 3px #2255FF;
+	padding: 1.5em 0;
+	padding-right: calc((100% - 1024px)/2);
+	padding-left: calc((100% - 1024px)/2);
+	/* padding: 1.5em calc((100% - 1024px)/2); */
+}
+
+#breadcrumb ul {
+	display: inline; /* tiene ul sulla riga del p */
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#breadcrumb p {
+	padding-left: 1em;
+}
+
+#breadcrumb p,
+#breadcrumb ul li {
+	display: inline; /* tiene tutti in riga */
+}
+
+#breadcrumb ul li:before {
+	content: " > ";
+} /* aggiunge la freccetta separatrice */
+
+#breadcrumb ul li:first-child:before {
+	content: none;
+} /* rimuove la freccetta davanti al primo */
+
+#breadcrumb a {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	font-size: 0.9em;
+	color: white;
+	display: inline; /* sovrasrive display:block; erededitato da "nav a" */
+}
+
+#breadcrumb a:hover,
+#breadcrumb a:active {
+	color: #505050;
+	background-color: white;
+}
+
+
+/* == Nav Pagination == */
+
+#content #menupagination {
+	margin: 3em 0 0;
+	text-align: center;
+}
+
+#content #menupagination ul li {
+	padding-top: 0.175em;
+	padding-bottom: 0.175em;
+	font-weight: bold;
+	display: inline;
+	margin: 0.2em;
+}
+
+#content #menupagination li a {
+	padding: 0.3em 0.6em;
+	text-transform: none;
+}
+
+#menupagination #currentPage {
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+}
+
+#menupagination ul #firstPage a,
+#menupagination ul #previousPage a,
+#menupagination ul #nextPage a,
+#menupagination ul #lastPage a {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+
+/* == Content == */
+
+.feedback,
+.formPage > p {
+	text-align: center;
+}
+
+#content {
+	margin: auto;
+	padding: 1.5em 2.5%;
+	width: 95%;
+	max-width: 1024px;
+	background-color: white;
+	box-sizing: border-box; /* CSS3 */
+	box-shadow: 0 2px 3px 1px #CCCCCC; /* CSS3 */
+}
+.no-boxsizing #content {
+	width: 90%;
+}
+
+#content h1 {
+	margin: 0 0.5em 1em;
+	padding: 0; /* per sicurezza */
+	font-weight: normal;
+	text-align: center;
+}
+
+#content h1.nonFirstH1 {
+	margin-top: 1em;
+}
+
+#content h1 + .navButtons,
+#content h1 + .onlyButton {
+	margin-top: -1.8em;
+}
+
+#content h2 {
+	margin-top: 1.3em;
+	margin-bottom: 0;
+	padding: 0.1em 0;
+	font-size: 1.5em;
+}
+
+#content h3 {
+	margin-top: 1.1em;
+	margin-bottom: 0;
+	padding: 0.2em 0 0 0;
+	font-size: 1.2em;
+}
+
+#content h4 {
+	margin-top: 0.9em;
+	margin-bottom: 0;
+	padding: 0.2em 0 0 0;
+	font-size: 1.1em;
+}
+
+#content p {
+	margin: 0.3em 0 0;
+	padding: 0; /* per sicurezza */
+}
+
+#content ul,
+#content ol {
+	margin: 0.5em 0;
+	padding: 0 1em;
+}
+
+#content .navList,
+#content .navList ul {
+	padding: 0;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+#content .navList,
+#content .navList > li {
+	margin: 0;
+}
+
+#content .navList li a {
+	padding: 0.3em 0;
+}
+
+#content .navList ul {
+	margin: 0 1em;
+}
+
+/* per mostrare le searchBy come bottoncini*/
+/*
+#content .navList a:link {
+	padding: 0.1em 0.3em;
+}
+
+#content .navList a:hover,
+#content .navList a:active {
+	padding: 0.1em 0.3em;
+	color: white;
+	background-color: #2255FF; */
+/*	-webkit-transition: 0.25s linear;*/ /* chrome 4.0-26.0 e safari 3.1-6.1 */
+/*	-o-transition: 0.25s linear;*/ /* opera 10.5-12.1 */
+/*	-moz-transition: 0.25s linear;*/ /* mozilla 4.0-16.0 */
+/*	transition: 0.25s linear;*/ /* CSS3 e IE 10+ */
+/*}
+*/
+
+#content nav {
+	margin: 0.5em 0;
+} /* per sistemare i nav button non al centro */
+
+#content nav a {
+	display: inline-block; /* limita l'area cliccabile dei bottoni */
+	font-size: 1em;
+}
+
+#content nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#content nav ul li {
+	display: inline-block; /* mette in riga i bottoni */
+	margin: 0;
+	padding: 0;
+}
+
+#content .navButtons { /* centra i bottoni alla pagina */
+	text-align: center;
+}
+
+#menu button,
+form #logout,
+form #editReviewButton,
+form input[type=submit],
+form input[type=reset] {
+	font-family: inherit;
+	background-color: white;
+	border: none;
+	color: #2255FF;
+    padding: 0.6em;
+    text-align: center;
+    text-decoration: none; /* per sicurezza */
+    display: inline-block;
+    font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+    margin: auto;
+    cursor: pointer;
+	-webkit-transition: 0.25s linear; /* chrome 4.0-26.0 e safari 3.1-6.1 */
+	-o-transition: 0.25s linear; /* opera 10.5-12.1 */
+	-moz-transition: 0.25s linear; /* mozilla 4.0-16.0 */
+	transition: 0.25s linear; /* CSS3 e IE 10+ */
+}
+
+#menu button:hover,
+#menu button:active,
+form #logout:hover,
+form #logout:active,
+form #editReviewButton:hover,
+form #editReviewButton:active,
+form input[type=submit]:hover,
+form input[type=submit]:active,
+form input[type=reset]:hover,
+form input[type=reset]:active {
+	background-color: #2255FF;
+	color: white;
+}
+
+#content .lastUpdate {
+	padding-top: 1.75em;
+	font-style: italic;
+}
+
+#content .userData dt,
+#content .userData dl {
+	float: left;
+}
+#content .userData dl {
+	clear: left;
+}
+#content .userData dt {
+	margin-right: 0.5em;
+}
+
+#content .disclaimer {
+	margin: 2em;
+}
+
+#content article header h2 {
+	margin: 1em 0 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+#content li {
+	margin: 0 1em;
+	padding: 0.3em 0;
+}
+
+#content dl {
+	margin: 0.7em 0 0;
+	padding: 0.2em 0;
+}
+
+#content dl dt {
+	padding-bottom: 0.3em;
+}
+
+#content dl dd {
+	margin-left: 1em;
+	padding-bottom: 1em;
+}
+
+#content .exampleCode,
+#content .exampleResult {
+	display: block;
+	padding: 0.3em;
+	margin: 0 0.5em;
+	font-size: 0.9em;
+}
+
+#content .exampleCode {
+	margin-top: 0.5em;
+	margin-bottom: 0.3em;
+	white-space: pre-wrap;
+	background-color: #F5F5F5; /* WhiteSmoke */
+}
+
+#content .exampleResult {
+	background-color: #F5F5DC; /* Beige */
+}
+
+#content .exampleResult li {
+	margin: 0 0 0 1.3em;
+}
+
+#content #aboutus {
+	padding-bottom: 3em;
+	border-bottom: 1px solid #EEEEEE;
+	margin-bottom: 2em;
+}
+
+#content #letters {
+	margin: 0 15%;
+	text-align: center;
+}
+
+#content #letters li {
+	display: inline-block;
+	width: 45%; /* 2 per riga */
+	min-width: 7em;
+	margin: 1em 2%;
+	text-align: center;
+} /* non 100% che c'è uno spazietto tra gli elem del display inline-block */
+
+#content #letters a {
+	padding-left: 3em;
+	padding-right: 3em;
+	border-bottom: 1px solid; /* eredita il colore */
+}
+
+#content #letters .specialLetters {
+	width: 94%; /* da solo sulla riga */
+} /* Non singole lettere */
+
+#content #letters .specialLetters a {
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+} /* Non singole lettere */
+
+
+/* == Read Review == */
+
+#main {
+	padding-bottom: 3em;
+	border-bottom: 1px solid #EEEEEE;
+	margin-bottom: 2em;
+}
+
+#main #game {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+#main #game figure {
+	float: left;
+	margin: auto;
+	padding: 4% 2.5%;
+	width: 45%;
+	text-align: center;
+}
+
+#main #gameCover {
+	max-width: 512px;
+	max-height: 720px;
+	width: 75%;
+	height: auto;
+}
+
+#main figure figcaption {
+	margin-top: 2%;
+}
+
+#main #game dl {
+	float: right;
+	margin: auto;
+	padding: 4% 1.5%;
+	width: 45%;
+}
+
+#main #review {
+	clear: both;
+}
+
+#main #review header h2 {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+#main #review header .publisher {
+	margin: 1em 0;
+	padding: 0;
+}
+
+#main #review header .publisher dt {
+	clear: both;
+	float: left;
+	padding-bottom: 0;
+	padding-right: 0.4em;
+}
+
+#main #review header .publisher dd,
+#main #review header .publisher dd time {
+	margin: 0;
+	padding-left: 0;
+	padding-bottom: 0.3em;
+	font-style: italic;
+}
+
+#main #readingTime {
+	clear: both;
+	margin: 1em 0;
+}
+
+#main #readingTime time {
+	font-style: italic;
+}
+
+#comments {
+	margin: auto;
+	width: 85%;
+}
+
+#comments article {
+	margin-top: 2em;
+}
+
+#comments article header h2 {
+	float: left;
+	margin: 0 0 0 0.35em;
+}
+
+#comments article header time {
+	float: right;
+	margin: 0.5em 0.5em 0 0;
+	font-style: italic;
+}
+
+#comments article p {
+	clear: both;
+	padding: 0.5em;
+	box-shadow: -6px 6px 3px -5px #CCCCCC; /* CSS3 */
+}
+.no-boxshadow #comments article p {
+	border-bottom: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+}
+
+#comments .userComment {
+	border-left: 3px solid #2255FF;
+}
+.no-boxshadow #comments .userComment {
+	border-left: 3px solid #2255FF;
+}
+
+
+/* == Form == */
+
+form {
+	margin: 0.6em 0em;
+	text-align: center;
+}
+
+form > fieldset {
+	display: inline-block;
+	text-align: left;
+	padding: 0.75% 1.5%;
+	border: none;
+	
+	background-color: #EEEEEE;
+	border-radius: 8px; /* CSS3 */
+	
+	/* visualizzazione alternativa per le form */
+	/*background-color: white;
+	box-shadow: 0 2px 3px 1px #CCCCCC;*/ /* CSS3 */
+}
+
+form legend {
+	float: left;
+	padding: 0 1em 0.75em 1em;
+	font-size: 1.2em;
+}
+
+form div {
+	margin-bottom: 1em;
+}
+
+form label {
+	clear: both;
+	display: block;
+	padding: 0.3em 0;
+}
+
+form div .fieldHelper {
+	clear: both;
+	display: block;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	margin: 0 0 0.4em;
+	color: #2255FF;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+
+/*form div .fieldHelper:after {
+	content: " \25BD \25B3";
+}*/
+
+form div .showHelp {
+	display: block;
+}
+
+form div .hideHelp {
+	display: none;
+}
+
+form div #aiutiUsername,
+form div #aiutiPassword,
+form div #aiutiCommento,
+form div #aiutiCoverImg {
+	font-size: 0.9em;
+	margin-left: 0.5em;
+	margin-bottom: 0;
+}
+
+form ul,
+form p {
+	clear: both;
+}
+
+form.onlyButton {
+	border: none;
+	box-shadow: none;
+}
+
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=number],
+form input[type=url],
+form textarea,
+form select {
+	clear: both;
+	display: block;
+	padding: 0.2em 0.2%;
+	border: 1px solid #EEEEEE;
+	border-radius: 4px; /* CSS3 */
+}
+
+form input[type=number],
+#annoUcita {
+	width: 4.5em;
+}
+
+form input[type=file] {
+	clear: both;
+	display: block;
+	padding: 0.2%;
+	margin-top: 0.6em;
+	max-width: 100%;
+}
+
+form input[type=checkbox] {
+	float: left;
+	display: block;
+	width: 1.25em;
+	height: 1.25em;
+	margin-top: 0.275em;
+}
+
+form input[type=submit],
+form input[type=reset] {
+	margin: 0.8em 0.1em;
+	padding: 0.5em;
+	border: 1px solid #A0A0A0;
+	border-radius: 3px; /* CSS3 */
+}
+
+form.onlyButton fieldset {
+	background-color: white;
+	display: block;
+	border: none;
+	text-align: center;
+	padding: 0;
+}
+
+form.onlyButton input[type=submit] {
+	border-radius: 0; /* CSS3 */
+}
+
+#formUnsubscribe fieldset {
+	width: 17em;
+}
+
+#formUnsubscribe div {
+	clear: both;
+	float: left;
+	margin: 0.7em 0.1em;
+}
+
+#formUnsubscribe .erroriForm {
+	clear: none;
+}
+
+#formUnsubscribe label {
+	display: inline;
+	margin-top: 0.4em;
+}
+
+#formUnsubscribe input[type=checkbox] {
+	float: right;
+	margin: 0 0 0.3em 0.6em;
+}
+
+#formUnsubscribe input[type=submit] {
+	float: right;
+	margin-top: 0.1em;
+}
+
+#formLogin fieldset,
+#formRegister fieldset,
+#formEmail fieldset,
+#formPassword fieldset {
+	width: 21.75em;
+	margin: auto;
+}
+
+#formReview fieldset,
+#formComment fieldset {
+	width: 96.5%;
+	min-width: 512px;
+	margin: auto;
+}
+
+#formReview > fieldset {
+	margin-bottom: 0.6em;
+}
+
+form #listPlatforms,
+form #listGenres {
+	width: 45%;
+	min-width: 256px;
+	display: block;
+	padding: 0;
+	border: none;
+}
+
+form #listPlatforms {
+	float: left;
+}
+
+form #listGenres {
+	float: right;
+}
+
+form #listPlatforms legend,
+form #listGenres legend {
+	padding: 0.6em 0.2em 0.4em 0.2em;
+}
+
+form #listPlatforms div,
+form #listGenres div {
+	clear: both;
+	display: block;
+}
+
+form #listPlatforms label,
+form #listGenres label {
+	display: inline-block;
+	padding-left: 0.2em;
+}
+
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=url],
+form #recensione,
+form #commento {
+	width: 99%;
+	max-width: 99%;
+}
+
+form #commento {
+	height: 10em;
+}
+
+form #coverDescr,
+form #descrRecensione {
+	width: 70%;
+	max-width: 99%;
+	height: 4em;
+}
+
+
+/* == Home Page == */
+
+#content #home-page-logo,
+#content #intro {
+	width: 40%;
+	vertical-align: middle;
+	margin: 0 4.5%;
+	text-align: center;
+	display: inline-block;
+}
+
+#content #home-page-logo img {
+	width: 100%;
+	height: auto;
+}
+
+#content #intro h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+/* == 404 == */
+
+.feedback #main-404 {
+	display: inline-block;
+	max-width: 40%;
+	padding: 8em 0;
+}
+
+.feedback #image-404 {
+	max-width: 50%;
+	margin-top: 5.5em;
+	margin-right: 2.4em;
+	float: right;
+	width: 18em;
+	height: 18em;
+	background-image: url('../images/404.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto; /* CSS3 */
+}
+.no-backgroundsize .feedback #image-404 {
+	background-image: none;
+}
+.no-backgroundsize .feedback #main-404 {
+	display: block;
+	max-width: none; /* default */
+	padding: 0;
+}
+
+
+/* == Footer == */
+
+footer {
+	clear: both;
+	margin: auto;
+	margin-top: 1.8em;
+	max-width: 1024px;
+	font-size: 0.9em;
+	color: white;
+	background-color: #505050;
+	border-top: solid 3px #2255FF;
+	overflow: hidden;
+	padding: 1em 0;
+	padding-right: calc((100% - 1024px)/2);
+	padding-left: calc((100% - 1024px)/2);
+	/* padding: 1.5em calc((100% - 1024px)/2); */
+}
+
+footer .copyright {
+	float: left;
+	max-width: 35%;
+	padding: 0.7em 0; /* 1 */
+	margin: 0; /* 2 */
+	font-size: 0.8em; /* 3 */
+	padding-left: 1em;
+} /* 1, 2 e 3 lo rendono grosso come i bottoni */
+
+footer #menufooter {
+	float: right;
+	max-width: 55%;
+	padding: 0; /* per sicurezza */
+}
+
+footer #menufooter ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+footer #menufooter ul li {
+	float: left;
+	margin-right: 0.2em;
+}
+
+footer nav a {
+	font-size: 0.9em;
+}
+
+footer nav a:link,
+footer nav a:visited {
+	color: white;
+}
+
+footer nav a:hover,
+footer nav a:active,
+footer nav #currentLink {
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #505050;
+	background-color: white;
+}

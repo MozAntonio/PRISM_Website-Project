@@ -1,0 +1,38 @@
+<form action="readReview.php?check" method="post" id="formComment">
+	<fieldset>
+		<legend>Cosa ne pensi?</legend>
+		
+		<label for="commento">Commento (massimo 1000 caratteri)</label>
+		<div>
+			<nav class="skipHelper"><a href="#commento">salta aiuti commento</a></nav>
+			<ul id="aiutiCommento">
+				<li>un utente può commentare una sola volta ogni recensione;</li>
+				<li>il commento risulterà pubblicato con il nome utente attualmente in uso;</li>
+				<li>il commento risulterà visibile solo agli utenti che abbiamo eseguito l'accesso;</li>
+				<li>nel commento alcuni caratteri contano più di uno:
+					<ul>
+						<li>entità <abbr title="HyperText Markup Language">HTML</abbr> convertite, come apostrofo (&apos;) in <code>&amp;apos;</code>,</li>
+						<li>lettere accentate e caratteri speciali;</li>
+					</ul>
+				</li>
+				<li>nel commento sono permessi i seguenti tag <abbr title="HyperText Markup Language">HTML</abbr> (con sintassi <abbr title="eXtensible Markup Language">XML</abbr>):
+					<ul>
+						<li><code>&lt;span lang=&quot;xx&quot;&gt;</code>testo in lingua xx<code>&lt;/span&gt;</code> (con xx tra: it, en, de, fr, es),</li>
+						<li><code>&lt;acronym title=&quot;testo esteso&quot;&gt;</code>acronimo o sigla<code>&lt;/acronym&gt;</code>,</li>
+						<li><code>&lt;abbr title=&quot;testo esteso&quot;&gt;</code>abbreviazione<code>&lt;/abbr&gt;</code>,</li>
+						<li><code>&lt;strong&gt;</code>testo importante<code>&lt;/strong&gt;</code>,</li>
+						<li><code>&lt;em&gt;</code>testo da enfatizzare<code>&lt;/em&gt;</code>.</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<textarea name="commento" id="commento" placeholder="scrivi un commento alla recensione (massimo 1000 caratteri)" maxlength="1000" cols="32" rows="16" required="required" spellcheck="true"></textarea>
+		</div>
+		
+		<p><abbr title="nota bene">NB</abbr>: ti mostreremo sempre per primo il tuo commento.</p>
+		
+		<div class="erroriForm"></div>
+		
+		<input type="submit" name="newcomment" value="Commenta" id="newcomment"/>
+	</fieldset>
+</form>

@@ -1,0 +1,19 @@
+#
+# .htaccess per il progetto Prism (TW 2016-17)
+# versione: 1.1
+#
+
+#
+# NOTA
+# se il file ha cambiato nome in "_htaccess" rinominarlo in ".htaccess"
+# su Windows rinominarlo ".htaccess."
+#
+
+# Ritorna 403 invece dell'index-of di una cartella
+#Options -Indexes
+
+# Il server ritorna la pag indicata invece della sua pagina d'errore
+ErrorDocument 404 /public_html/404.html
+
+# Setta il tempo del server al fuso orario italiano
+#SetEnv TZ Europe/Rome

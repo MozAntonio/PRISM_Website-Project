@@ -1,0 +1,20 @@
+<h1>Eliminazione <span lang="en">account</span></h1>
+<p>Leggere attentamente quanto segue per eliminare l'<span lang="en">account</span>.</p>
+<div class="disclaimer">
+	<p>L'eliminazione dell'<span lang="en">account</span> comporterà:</p>
+		_AVVISO_
+	<p>Attenzione: tale operazione non è in alcun modo reversibile.</p>
+</div>
+<form action="editProfile.php?check=unsubscribe" method="post" id="formUnsubscribe">
+	<fieldset>
+		<legend>Conferma disiscrizione:</legend>
+		<div>
+			<input type="checkbox" name="ack" id="ack" value="on" required="required"/>
+			<label for="ack">Accetto:</label>
+		</div>
+		
+		<div class="erroriForm"></div>
+		
+		<input type="submit" name="deleteU" value="Disiscriviti" id="deleteU"/>
+	</fieldset>
+</form>

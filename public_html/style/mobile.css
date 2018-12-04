@@ -1,0 +1,471 @@
+/**
+ * Contenuto:
+ *   > mobile.css ............... line: 24
+ *      - CLEANUP e GENERAL
+ *      - HEADER
+ *      - BREADCRUMB
+ *      - NAV PAGINATION
+ *      - READ REVIEW
+ *      - FORM
+ *      - 404
+ *      - FOOTER
+ *   > media queries ............ line: 408
+ *      - max-width: 640px
+ *      - max-width: 368px
+ *
+ * Dipendenze:
+ *   > prismdefault.css
+**/
+
+
+
+
+
+/* === mobile.css === */
+/**
+ * Questo file costituisce il CSS mobile (<768px) di Prism Game Reviews.
+**/
+ 
+/*! PrismGame | mobile.css */
+
+
+/* CLEANUP e GENERAL */
+
+body {
+	font-size: 1.1em;
+	background-color: white;
+}
+
+body,
+button,
+input {
+	line-height: 1.6;
+}
+
+body > header {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.6em;
+}
+
+nav a,
+form input[type=submit],
+form input[type=reset],
+form #logout,
+form #editReviewButton,
+#menu button {
+	-webkit-transition: none; /* chrome 4.0-26.0 e safari 3.1-6.1 */
+	-o-transition: none; /* opera 10.5-12.1 */
+	-moz-transition: none; /* mozilla 4.0-16.0 */
+	transition: none; /* CSS3 e IE 10+ */
+}
+
+#breadcrumb {
+	margin-bottom: 0;
+	font-size: 1em;
+	padding: 1em 0;
+}
+
+#content {
+	box-shadow: none;
+	width: 98%;
+}
+
+#content ul,
+#content ol {
+	padding: 0 0.5em;
+}
+
+#content .navList {
+	font-size: 1.1em;
+}
+
+#content .navList ul {
+	margin: 0 0.5em;
+}
+
+#content .disclaimer {
+	margin: 0.5em;
+}
+
+#content #letters {
+	margin: 0 7%;
+}
+
+#comments {
+	width: 95%;
+}
+
+footer {
+	margin: 0;
+}
+
+
+/* HEADER */
+
+#logoBlock {
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 45%; /* sovrascrive la max-width di desktop.css */
+}
+
+#logoBlock #logo {
+	margin: 0.5em;
+}
+
+#menu #menuIcon {
+	border-radius: 0;
+} /* fixa un bug di mozilla mobile */
+
+#menu #menuIcon.showMenu {
+	display: block;
+}
+
+#menu {
+	border: none;
+}
+
+#menu ul {
+	margin: 0;
+}
+
+#menu #login {
+	float: right;
+	min-height: 3.9em;
+	margin: 1.3em auto auto 0.3em;
+}
+
+#menu ul #login li {
+	clear: none;
+	float: right; /* mette più a destra menu */
+	margin-right: 0.3em;
+	line-height: 1.6;
+}
+
+#menu #mainMenu {
+	text-align: center;
+	width: 93%;
+	margin: 0 3.5%;
+	clear: right; /* così sta sotto profilo anche se width<100% */
+	
+	/*
+	 * gli li sono float:left; a causa di "#menu ul li" in desktop.css
+	 * #mainMenu (che è un li) segue un float:right; di "#menu #login" in desktop.css
+	 * per cui:
+	 *	o si lascia così (senza istruzioni dopo questo commento)
+	 *	o float:none;+display:block; per coerenza e sicurezza e non serve più la width esplicita
+	 */
+	float: none; /* oppure: float:X; perchè stia a X */
+	display: block;
+}
+
+#menu ul #mainMenu li {
+	float: none; /* bottoni uno sotto l'altro e non a fianco */
+	margin: 0.1em 0; /* stacca vertic i bottoni */
+}
+
+#menu #mainMenu.hideMenu {
+	display: none;
+}
+
+#menu #mainMenu.showMenu {
+	display: block;
+}
+
+
+/* BREADCRUMB */
+
+#breadcrumb ul li:before {
+	content: " | ";
+} /* cambio separatore */
+
+#breadcrumb ul {
+	margin: 0 0.4em;
+}
+
+#breadcrumb a {
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+
+#breadcrumb p,
+#breadcrumb .lastChildBreadcrumb {
+	/* display: none; */
+	position: absolute;
+	top: auto;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+} /* elimino il "Ti trovi in:" e il titolo della recensione */
+
+
+/* NAV PAGINATION */
+
+#content #menupagination ul li {
+	padding-top: 0.414em;
+	padding-bottom: 0.414em;
+}
+
+#content #menupagination li a,
+#menupagination #currentPage {
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+}
+
+#menupagination ul #firstPage a,
+#menupagination ul #previousPage a,
+#menupagination ul #nextPage a,
+#menupagination ul #lastPage a {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+
+/* READ REVIEW */
+
+#main #game figure,
+#main #game dl {
+	float: none;
+	width: auto; /* default */
+}
+
+/* opzionale, mette i dati tecnici in riga 
+#main #game dl dt {
+	padding-right: 0.4em;
+	clear: left;
+	float: left;
+}*/
+
+#main #review header h2 {
+	font-size: 1.5em;
+}
+
+#comments article header h2 {
+	font-size: 1.3em;
+}
+
+
+/* FORM */
+
+form {
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	box-shadow: -6px 6px 3px -5px #CCCCCC; /* CSS3 */
+}
+.no-boxshadow form {
+	border-bottom: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+}
+
+form > fieldset {
+	padding-left: 0;
+	padding-right: 0;
+	background-color: white;
+}
+
+form legend {
+	padding-left: 0;
+}
+
+form div {
+	margin-bottom: 1.3em;
+}
+
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=number],
+form input[type=url],
+form textarea,
+form select {
+	border-radius: 0;
+}
+
+form input[type=submit],
+form input[type=reset] {
+	margin: 0.5em;
+	border: none;
+	border-radius: 0;
+}
+
+form input[type=submit] {
+	float: right;
+	margin-left: 0.2em;
+}
+
+form input[type=reset] {
+	margin-right: 0.2em;
+}
+
+form input[type=checkbox] {
+	margin-top: 0.55em;
+}
+
+form.onlyButton input[type=submit] {
+	float: none;
+}
+
+#formUnsubscribe {
+	width: 15em;
+	margin: auto;
+}
+
+#formUnsubscribe fieldset {
+	max-width: 100%;
+}
+
+#formUnsubscribe input[type=checkbox] {
+	margin: 0.2em;
+}
+
+#formUnsubscribe input[type=submit] {
+	margin-top: 0.1em;
+}
+
+#formLogin fieldset,
+#formRegister fieldset,
+#formEmail fieldset,
+#formPassword fieldset {
+	width: 100%;
+}
+
+#formReview,
+#formComment {
+	padding-left: 0;
+	padding-right: 0;
+	box-shadow: none;
+}
+
+#formReview fieldset,
+#formComment fieldset {
+	min-width: 256px;
+	box-shadow: none;
+}
+
+form #listPlatforms,
+form #listGenres {
+	min-width: 128px;
+	margin-bottom: 0.5em;
+}
+
+form #listPlatforms div,
+form #listGenres div {
+	margin-bottom: 0.8em;
+}
+
+form #coverDescr,
+form #descrRecensione {
+	width: 100%;
+}
+
+
+/* 404 */
+
+.feedback #main-404 {
+	display: block;
+	max-width: none; /* default */
+	padding: 0;
+}
+
+.feedback #image-404 {
+	display: none;
+}
+
+
+/* FOOTER */
+
+footer {
+	text-align: center;
+}
+
+footer .copyright {
+	float: none;
+	max-width: none; /* default */
+	padding: 1em 1em 0;
+}
+
+footer #menufooter {
+	float: none;
+	max-width: none; /* default */
+}
+
+footer #menufooter ul li {
+	float: none;
+	display: inline-block;
+	margin: 0.1em 0; /* stacca vertic i bottoni */
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 640px)
+{
+#logoBlock h1 {
+	/* display: none; */
+	position: absolute;
+	top: auto;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+#menu #login {
+	margin-left: 5em; /* il menu non va sopra il logo */
+}
+footer #menufooter ul li { /* footer due tasti per riga */
+	width: 49%;
+	padding-left: 0;
+	padding-right: 0;
+}
+#content #home-page-logo {
+	display: block;
+	margin: 0 30%;
+}
+#content #intro {
+	display: block;
+	width: 60%;
+	margin: 1em 20% 0;
+}
+#content #intro h1 {
+	margin-bottom: 0.5em;
+}
+#content #letters {
+	margin: 0 4%;
+}
+#content #menupagination .numberPage {
+	display: none;
+}
+} /* chiuede media 640px */
+
+@media (max-width: 368px)
+{
+form input[type=submit],
+form input[type=reset] {
+	float: none;
+	margin: 0.1em 0;
+	width: 98%;
+}
+footer #menufooter ul li { /* footer un tasto per riga */
+	width: 98%;
+}
+#formUnsubscribe fieldset {
+	text-align: center;
+}
+#formUnsubscribe div {
+	float: none;
+	width: 6em;
+	margin: auto;
+}
+#formUnsubscribe .erroriForm {
+	width: auto;
+}
+} /* chiuede media 368 */

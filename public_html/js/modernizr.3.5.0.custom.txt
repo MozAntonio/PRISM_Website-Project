@@ -1,0 +1,2 @@
+La custom build di Modernizr utilizzata è ottenibile direttamente da questo link
+https://modernizr.com/download?backgroundsize-boxshadow-boxsizing-input-inputtypes-oninput-placeholder-textareamaxlength-dontmin-setclasses

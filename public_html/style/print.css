@@ -1,0 +1,282 @@
+/**
+ * Contenuto:
+ *   > print.css ............... line: 22
+ *      - GENERAL
+ *      - JUSTIFY
+ *      - LINK
+ *      - HEADER e MENU
+ *      - BREADCRUMB
+ *      - CONTENT e FORM
+ *      - PROFILE
+ *		- READ REVIEW
+ *      - FOOTER
+ *
+ * Dipendenze:
+ *   > prismdefault.css
+**/
+
+
+
+
+
+/* === print.css === */
+/**
+ * Questo file costituisce il CSS di stampa (print) di Prism Game Reviews.
+**/
+ 
+/*! PrismGame | print.css */
+
+
+/* GENERAL */
+
+@page {
+    margin: 1cm;
+}
+
+html,
+body {
+	font-family:"Times New Roman", Times, serif;
+	background-color: white;
+}
+
+
+/* JUSTIFY */
+
+p,
+ul li,
+ol li,
+dl dt,
+dl dd {
+	text-align: justify;
+}
+
+.feedback p,
+#intro p {
+	text-align: center;
+}
+
+
+/* LINK */
+
+a:link,
+a:visited {
+	color: #181818;
+	font-weight: normal;
+}
+
+a[href^="http"]:link,
+article header a:link,
+#gameSpec dd a:link,
+a[href^="http"]:visited,
+article header a:visited,
+#gameSpec dd a:visited {
+	color: #2255FF;
+	text-decoration: underline;
+}
+
+/*
+a[href^="http"]:visited,
+article header a:visited,
+#gameSpec dd a:visited {
+	color: #AA22FF;
+}
+*/
+
+a[href^="http"]:link:after,
+a[href^="http"]:visited:after {
+    content: " (" attr(href) ")";
+	font-size: 75%;
+}
+
+article header a {
+	font-size: 90%;
+}
+
+article header a:link:after,
+article header a:visited:after {
+	content: "\a (" attr(href) ")";
+	font-size: 60%;
+	white-space: pre;
+}
+
+#gameSpec dd a:link:after,
+#gameSpec dd a:visited:after {
+	content: "";
+}
+
+
+/* HEADER e MENU */
+
+#menu,
+#menufooter {
+	display: none;
+}
+
+#logoBlock {
+	border: none;
+	max-width: 100%;
+	font-size: 65%;
+}
+
+#logoBlock h1 {
+	margin-top: 1.5em;
+}
+
+
+/* BREADCRUMB */
+
+#breadcrumb {
+	font-size: 65%;
+	padding-top: 0.65em;
+	border: none;
+	border-top: 1px solid #2255FF;
+	background-color: white;
+}
+
+#breadcrumb,
+#breadcrumb a {
+	font-weight: normal;
+	color: #181818;
+}
+
+#breadcrumb a {
+	padding-left: 0.1em;
+	padding-right: 0.1em;
+}
+
+#breadcrumb ul {
+	margin: 0 1em;
+}
+
+#breadcrumb ul li:before {
+	content: " / ";
+} /* Cambio il separatore */
+
+#breadcrumb p,
+#breadcrumb .lastChildBreadcrumb {
+	display: none;
+} /* Elimino il "Ti trovi in:" e il titolo della recensione */
+
+
+/* CONTENT e FORM */
+
+#content {
+	padding: 0;
+	width: 100%;
+	box-shadow: none;
+}
+
+#content h1 {
+	font-size: 1.6em;
+}
+
+#content nav a,
+form input[type=submit],
+form input[type=reset] {
+	font-family: "Open Sans", Arial, Helevetica, sans-serif;
+	font-weight: bold;
+}
+
+form fieldset {
+	background-color: white;
+	/* box-shadow: none; */ /* visualizzazione alternativa per le form */
+}
+
+form > fieldset {
+	border: 1px solid #EEEEEE;
+}
+
+form div .fieldHelper,
+form.onlyButton {
+	display: none;
+}
+
+form div .hideHelp {
+	display: block;
+}
+
+#formReview fieldset {
+	width: 95%;
+} /* evita che vengano create pagine extra vuote in fase di stampa */
+
+form #listPlatforms,
+form #listGenres {
+	float: none;
+}
+
+#content #menupagination ul li {
+	font-weight: normal;
+	font-size: 0.9em;
+	color: #181818;
+	background-color: transparent;
+}
+
+#content #menupagination .numberPage,
+nav#menupagination ul #firstPage,
+nav#menupagination ul #previousPage,
+nav#menupagination ul #nextPage,
+nav#menupagination ul #lastPage {
+	display: none;
+}
+
+#currentPage:before {
+	content: "pag. ";
+}
+
+
+/* PROFILE */
+
+.profilePage h2,
+#content.profilePage nav a {
+	display: none;
+}
+
+#content .userData {
+	margin-top: -2.5em;
+	margin-left: 2em;
+}
+
+
+/* READ REVIEW */
+
+#content h1 + .navButtons {
+	margin: 0;
+}
+
+#comments .navButtons a,
+.goToSection {
+	display: none;
+}
+
+#comments .navButtons:after {
+	content: "Visita il nostro sito Prism Game Reviews per accedere e visualizzare i commenti.";
+}
+
+#comments article p {
+	border-bottom: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+	box-shadow: none;
+}
+
+#comments .userComment {
+	border-left: 1px solid #181818;
+}
+.no-boxshadow #comments .userComment {
+	border-left: 1px solid #181818;
+}
+
+
+/* FOOTER */
+
+footer {
+	border-top: 1px solid #2255FF; /* oppure: border: none; */
+	background-color: white;
+}
+
+footer .copyright {
+	float: none;
+	padding: 0;
+	color: #181818;
+	max-width: 100%;
+	text-align: center;
+}

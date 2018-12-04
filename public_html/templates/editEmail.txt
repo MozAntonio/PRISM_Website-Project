@@ -1,0 +1,22 @@
+<h1>Modifica <span lang="en">email</span></h1>
+<p>Compila i seguenti campi per modificare l'<span lang="en">email</span>.</p>
+<form action="editProfile.php?check=email" method="post" id="formEmail">
+	<fieldset>
+		<legend>Modifica dell'<span lang="en">email</span>:</legend>
+		<label for="email">Nuova <span lang="en">email</span> *</label>
+		<div>
+			<input type="email" name="email" id="email" placeholder="inserisci la tua nuova email" maxlength="128" size="32" required="required"/>
+		</div>
+		
+		<label for="checkPassword"><span lang="en">Password</span> di conferma *</label>
+		<div>
+			<input type="password" name="checkPassword" id="checkPassword" placeholder="inserisci la tua password per confermare" maxlength="255" size="32" required="required"/>
+		</div>
+		
+		<p>* campo obbligatorio</p>
+		
+		<div class="erroriForm"></div>
+		
+		<input type="submit" name="editEmail" value="Modifica" id="editEmail"/>
+	</fieldset>
+</form>

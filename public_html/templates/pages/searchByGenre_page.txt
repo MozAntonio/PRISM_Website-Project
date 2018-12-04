@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> -->
+	<meta charset="utf-8" />
+	<title>_TITLE_</title> <!-- dal particolare al generale -->
+	
+	<!-- meta -->
+	<meta name="description" content="_DESCRIPTION_" /> <!-- max 150 char -->
+	<meta name="keywords" content="_KEYWORDS_" /> <!-- max 10 -->
+	<meta name="author" content="Prism" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="_ROBOTS_" />
+	
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="../style/prismdefault.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../style/mobile.css" media="handheld, screen and (max-width:768px), only screen and (max-device-width:768px)" />
+	<!-- <link rel="stylesheet" type="text/css" href="../style/prismdefault.css" media="all" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../style/mobile.css" media="screen and (max-width:768px)" /> -->
+	<link rel="stylesheet" type="text/css" href="../style/print.css" media="print" />
+	<link rel="shortcut icon" href="../images/favicon.png" />
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet" />
+	
+	<!-- script -->
+	<script src="../js/modernizr.3.5.0.custom.min.js" type="text/javascript"></script>
+	<!--[if !IE]>-->
+	<script src="../js/user.js" type="text/javascript"></script>
+	<!--<![endif]-->
+	
+	<!-- backward compatibility -->
+	<!--[if gt IE 7]>
+	<script src="../js/user.js" type="text/javascript"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+	<![endif]-->
+	
+	<!-- licenses --> 
+		<!-- open sans ALv2 -->
+		<!-- modernizr MIT -->
+		<!-- html5shiv MIT -->
+</head>
+
+
+
+<body onload="addEventsHamburger()">
+
+<nav class="skipSection"><a href="#content">salta menu e vai al contenuto</a></nav>
+<header>
+	<div id="logoBlock">
+		<span id="logo"></span>
+		<h1 lang="en"><span class="accent">P</span>rism <span class="accent">G</span>ame <span class="accent">R</span>eviews</h1>
+	</div>
+	<nav id="menu">
+		<ul>
+			<li id="login"><ul>
+				<li><a href="profile.php">Profilo</a></li>
+			</ul></li>
+			<li id="mainMenu"><ul>
+				<li><a href="../index.html" lang="en">Home</a></li>
+				<li><a href="searchByPlatform.php">Piattaforma</a></li>
+				<li id="currentLink">Genere</li>
+				<li><a href="../searchByAZ.html"><abbr title="Lettera dell'Alfabeto">A-Z</abbr></a></li>
+			</ul></li>
+		</ul>
+	</nav>
+</header>
+
+<nav class="skipSection"><a href="#content">salta <span lang="en">breadcrumb</span> e vai al contenuto</a></nav>
+<nav id="breadcrumb">
+	<p>Ti trovi in: </p>
+	<ul>
+		_BREADCRUMB_
+	</ul>
+</nav>
+<div id="content">
+	<h1>Seleziona il genere</h1>
+	_CONTENT_
+</div> <!-- chiude content -->
+<footer>
+	<nav id="menufooter">
+		<ul>
+			<li><a href="../aboutus.html">Chi siamo</a></li>
+			<li><a href="../privacy.html">Note legali</a></li>
+			<li><a href="../accessibility.html">Accessibilità</a></li>
+			<li><a href="../sitemap.html">Mappa del sito</a></li>
+		</ul>
+	</nav>
+	<p class="copyright">© <time datetime="2017">2017</time> Prism <span lang="en">Game Reviews</span> - Tutti i diritti riservati</p>
+</footer>
+</body>
+</html>
